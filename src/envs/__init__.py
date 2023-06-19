@@ -1,6 +1,7 @@
 from functools import partial
 import pretrained
-from smac.env import MultiAgentEnv, StarCraft2Env
+# from smac.env import MultiAgentEnv, StarCraft2Env
+from smacv2.env import MultiAgentEnv, StarCraft2Env, StarCraftCapabilityEnvWrapper
 import sys
 import os
 import gym
@@ -10,12 +11,12 @@ from gym.spaces import flatdim
 import numpy as np
 from gym.wrappers import TimeLimit as GymTimeLimit
 
+
 def env_fn(env, **kwargs) -> MultiAgentEnv:
     return env(**kwargs)
 
 
-REGISTRY = {}
-REGISTRY["sc2"] = partial(env_fn, env=StarCraft2Env)
+REGISTRY = {"sc2": partial(env_fn, env=StarCraftCapabilityEnvWrapper)}
 
 if sys.platform == "linux":
     os.environ.setdefault(
@@ -35,7 +36,7 @@ class TimeLimit(GymTimeLimit):
 
     def step(self, action):
         assert (
-            self._elapsed_steps is not None
+                self._elapsed_steps is not None
         ), "Cannot call env.step() before calling reset()"
         observation, reward, done, info = self.env.step(action)
         self._elapsed_steps += 1
