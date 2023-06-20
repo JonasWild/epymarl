@@ -113,8 +113,7 @@ def run_sequential(args, logger):
     groups = {"agents": args.n_agents}
     preprocess = {"actions": ("actions_onehot", [OneHot(out_dim=args.n_actions)])}
 
-    print(runner.get_env_info())
-    print(runner.env.get_obs_feature_names())
+    print(scheme)
 
     buffer = ReplayBuffer(
         scheme,
