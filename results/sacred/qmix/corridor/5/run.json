@@ -1,0 +1,115 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src",
+    "dependencies": [
+      "munch==2.5.0",
+      "numpy==1.23.1",
+      "sacred==0.8.2",
+      "torch==1.12.1"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [
+      {
+        "commit": "959cd1b40d663f9e76c90971e1d5beb0afaed1fe",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      },
+      {
+        "commit": "959cd1b40d663f9e76c90971e1d5beb0afaed1fe",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      },
+      {
+        "commit": "959cd1b40d663f9e76c90971e1d5beb0afaed1fe",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      }
+    ],
+    "sources": [
+      [
+        "main.py",
+        "_sources\\main_253d6251cbb694cc4ee7c85b420002f6.py"
+      ],
+      [
+        "run.py",
+        "_sources\\run_0d4473baa0341520abe28c1d83d7b859.py"
+      ],
+      [
+        "utils\\logging.py",
+        "_sources\\logging_7ddc698bb74674bae897bfdc5662ed00.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\sacred\\config\\captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\main.py\", line 44, in my_main\n    run(_run, config, _log)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\run.py\", line 60, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\run.py\", line 190, in run_sequential\n    episode_batch = runner.run(test_mode=False)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\runners\\episode_runner.py\", line 49, in run\n    self.reset()\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\runners\\episode_runner.py\", line 45, in reset\n    self.env.reset()\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\smacv2\\smacv2\\env\\starcraft2\\wrapper.py\", line 33, in reset\n    return self.env.reset(reset_config)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\smacv2\\smacv2\\env\\starcraft2\\starcraft2.py\", line 555, in reset\n    self.init_units(\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\smacv2\\smacv2\\env\\starcraft2\\starcraft2.py\", line 2247, in init_units\n    self._create_new_team(ally_team, episode_config, ally=True)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\smacv2\\smacv2\\env\\starcraft2\\starcraft2.py\", line 2221, in _create_new_team\n    unit_type = self._convert_unit_name_to_unit_type(unit, ally=ally)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\smacv2\\smacv2\\env\\starcraft2\\starcraft2.py\", line 2237, in _convert_unit_name_to_unit_type\n    return self.ally_unit_map[unit_name]\n",
+    "KeyError: 'zealots'\n"
+  ],
+  "heartbeat": "2023-06-19T10:12:47.012454",
+  "host": {
+    "ENV": {},
+    "cpu": "Unknown",
+    "gpus": {
+      "driver_version": "531.79",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 960",
+          "persistence_mode": false,
+          "total_memory": 2048
+        }
+      ]
+    },
+    "hostname": "DESKTOP-1HDPUO6",
+    "os": [
+      "Windows",
+      "Windows-10-10.0.22621-SP0"
+    ],
+    "python_version": "3.8.16"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2023-06-19T10:12:39.471495",
+  "status": "FAILED",
+  "stop_time": "2023-06-19T10:12:47.016457"
+}

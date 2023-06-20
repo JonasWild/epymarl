@@ -46,7 +46,11 @@ class EpisodeRunner:
         self.t = 0
 
     def run(self, test_mode=False):
-        self.reset()
+        try:
+            self.reset()
+        except Exception as e:
+            print(e.with_traceback())
+            print("Error")
 
         terminated = False
         episode_return = 0
