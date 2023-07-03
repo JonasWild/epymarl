@@ -3,6 +3,10 @@ from functools import partial
 from components.episode_buffer import EpisodeBatch
 import numpy as np
 
+import CustomStarCraftEnv.CustomStarCraftEnv
+
+from myutils.HeatSC2map import HeatSC2map as Heatmap
+
 
 class EpisodeRunner:
 
@@ -25,6 +29,7 @@ class EpisodeRunner:
 
         # Log the first run
         self.log_train_stats_t = -1000000
+        self.log_heatmaps_t = 0
 
     def setup(self, scheme, groups, preprocess, mac):
         self.new_batch = partial(EpisodeBatch, scheme, groups, self.batch_size, self.episode_limit + 1,
@@ -46,11 +51,7 @@ class EpisodeRunner:
         self.t = 0
 
     def run(self, test_mode=False):
-        try:
-            self.reset()
-        except Exception as e:
-            print(e.with_traceback())
-            print("Error")
+        self.reset()
 
         terminated = False
         episode_return = 0
@@ -58,10 +59,11 @@ class EpisodeRunner:
 
         while not terminated:
 
+            obs = self.env.get_obs()
             pre_transition_data = {
                 "state": [self.env.get_state()],
                 "avail_actions": [self.env.get_avail_actions()],
-                "obs": [self.env.get_obs()]
+                "obs": [obs]
             }
 
             self.batch.update(pre_transition_data, ts=self.t)
@@ -71,6 +73,13 @@ class EpisodeRunner:
             actions = self.mac.select_actions(self.batch, t_ep=self.t, t_env=self.t_env, test_mode=test_mode)
 
             reward, terminated, env_info = self.env.step(actions[0])
+
+            if isinstance(self.env, CustomStarCraftEnv.CustomStarCraftEnv.CustomStarCraftEnv):
+                try:
+                    self.env.evaluate_actions(actions[0], obs)
+                except Exception as e:
+                    print(e)
+
             if test_mode and self.args.render:
                 self.env.render()
             episode_return += reward
@@ -113,10 +122,17 @@ class EpisodeRunner:
         if test_mode and (len(self.test_returns) == self.args.test_nepisode):
             self._log(cur_returns, cur_stats, log_prefix)
         elif self.t_env - self.log_train_stats_t >= self.args.runner_log_interval:
-            self._log(cur_returns, cur_stats, log_prefix)
             if hasattr(self.mac.action_selector, "epsilon"):
                 self.logger.log_stat("epsilon", self.mac.action_selector.epsilon, self.t_env)
             self.log_train_stats_t = self.t_env
+
+        if self.t_env - self.log_heatmaps_t >= self.args.runner_log_heatmaps_interval:
+            self.logger.log_heatmaps(self.env.get_heatmaps())
+            self.log_heatmaps_t = self.t_env
+
+            # reset heatmaps and info
+            self.env.is_heatmaps_initialized = False
+            self.env.is_queues_initialized = False
 
         return self.batch
 
@@ -128,4 +144,5 @@ class EpisodeRunner:
         for k, v in stats.items():
             if k != "n_episodes":
                 self.logger.log_stat(prefix + k + "_mean" , v/stats["n_episodes"], self.t_env)
+
         stats.clear()

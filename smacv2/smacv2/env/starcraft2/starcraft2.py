@@ -111,6 +111,7 @@ class StarCraft2Env(MultiAgentEnv):
         heuristic_ai=False,
         heuristic_rest=False,
         debug=False,
+        custom_env_args={},
     ):
         """
         Create a StarCraftC2Env environment.

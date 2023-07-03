@@ -1,0 +1,115 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src",
+    "dependencies": [
+      "munch==2.5.0",
+      "numpy==1.23.1",
+      "sacred==0.8.2",
+      "torch==1.12.1"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [
+      {
+        "commit": "f12891d85d0e36e9261ea91ff25bdca74f3a8698",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      },
+      {
+        "commit": "f12891d85d0e36e9261ea91ff25bdca74f3a8698",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      },
+      {
+        "commit": "f12891d85d0e36e9261ea91ff25bdca74f3a8698",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      }
+    ],
+    "sources": [
+      [
+        "main.py",
+        "_sources\\main_8d5ae448eaa6a4c209f5b3436cb8ca22.py"
+      ],
+      [
+        "run.py",
+        "_sources\\run_10ef91ac0724d4b44e79eaf00864b243.py"
+      ],
+      [
+        "utils\\logging.py",
+        "_sources\\logging_8a9658e1658b4127491704fb5ab419a8.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\sacred\\config\\captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\main.py\", line 53, in my_main\n    run(_run, config, _log)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\run.py\", line 60, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\run.py\", line 193, in run_sequential\n    episode_batch = runner.run(test_mode=False)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\runners\\episode_runner.py\", line 123, in run\n    self._log(cur_returns, cur_stats, log_prefix, heatmaps=heatmaps)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\runners\\episode_runner.py\", line 140, in _log\n    self.logger.log_heatmap(heatmap.name, heatmap.data)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\utils\\logging.py\", line 47, in log_heatmap\n    self.tb_image_logger(heatmap_name, image.unsqueeze(0), 0)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\tensorboard_logger\\tensorboard_logger.py\", line 326, in log_images\n    _default_logger.log_images(name, images, step=step)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\tensorboard_logger\\tensorboard_logger.py\", line 135, in log_images\n    summary = self._image_summary(tf_name, images, step=step)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\tensorboard_logger\\tensorboard_logger.py\", line 164, in _image_summary\n    Image.fromarray(img)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\PIL\\Image.py\", line 3078, in fromarray\n    arr = obj.__array_interface__\n",
+    "AttributeError: 'Tensor' object has no attribute '__array_interface__'\n"
+  ],
+  "heartbeat": "2023-06-27T08:20:27.698780",
+  "host": {
+    "ENV": {},
+    "cpu": "Unknown",
+    "gpus": {
+      "driver_version": "531.79",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 960",
+          "persistence_mode": false,
+          "total_memory": 2048
+        }
+      ]
+    },
+    "hostname": "DESKTOP-1HDPUO6",
+    "os": [
+      "Windows",
+      "Windows-10-10.0.22621-SP0"
+    ],
+    "python_version": "3.8.16"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2023-06-27T08:19:39.530919",
+  "status": "FAILED",
+  "stop_time": "2023-06-27T08:20:27.703779"
+}

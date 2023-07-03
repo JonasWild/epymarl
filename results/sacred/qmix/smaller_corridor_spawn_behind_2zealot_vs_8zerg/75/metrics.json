@@ -1,0 +1,145 @@
+{
+  "battle_won_mean": {
+    "steps": [
+      130
+    ],
+    "timestamps": [
+      "2023-06-29T10:37:37.635089"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "dead_allies_mean": {
+    "steps": [
+      130
+    ],
+    "timestamps": [
+      "2023-06-29T10:37:37.635089"
+    ],
+    "values": [
+      2.0
+    ]
+  },
+  "dead_enemies_mean": {
+    "steps": [
+      130
+    ],
+    "timestamps": [
+      "2023-06-29T10:37:37.635089"
+    ],
+    "values": [
+      0.6666666666666666
+    ]
+  },
+  "ep_length_mean": {
+    "steps": [
+      130
+    ],
+    "timestamps": [
+      "2023-06-29T10:37:37.635089"
+    ],
+    "values": [
+      43.333333333333336
+    ]
+  },
+  "epsilon": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-06-29T10:36:25.049227"
+    ],
+    "values": [
+      1.0
+    ]
+  },
+  "return_mean": {
+    "steps": [
+      130
+    ],
+    "timestamps": [
+      "2023-06-29T10:37:37.633585"
+    ],
+    "values": [
+      3.571039109002976
+    ]
+  },
+  "return_std": {
+    "steps": [
+      130
+    ],
+    "timestamps": [
+      "2023-06-29T10:37:37.633585"
+    ],
+    "values": [
+      0.43263158267904833
+    ]
+  },
+  "test_battle_won_mean": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-06-29T10:37:02.942240"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_dead_allies_mean": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-06-29T10:37:02.942240"
+    ],
+    "values": [
+      2.0
+    ]
+  },
+  "test_dead_enemies_mean": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-06-29T10:37:02.942240"
+    ],
+    "values": [
+      0.6
+    ]
+  },
+  "test_ep_length_mean": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-06-29T10:37:02.942240"
+    ],
+    "values": [
+      49.06
+    ]
+  },
+  "test_return_mean": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-06-29T10:37:02.941240"
+    ],
+    "values": [
+      1.2138431222098214
+    ]
+  },
+  "test_return_std": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-06-29T10:37:02.942240"
+    ],
+    "values": [
+      1.1046237933650203
+    ]
+  }
+}

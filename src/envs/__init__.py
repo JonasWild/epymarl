@@ -1,6 +1,6 @@
 from functools import partial
 import pretrained
-from smacv2.smacv2.env import MultiAgentEnv ,StarCraft2Env, StarCraftCapabilityEnvWrapper
+from smacv2.smacv2.env import MultiAgentEnv, StarCraft2Env, StarCraftCapabilityEnvWrapper
 import sys
 import os
 import gym
@@ -10,13 +10,16 @@ from gym.spaces import flatdim
 import numpy as np
 from gym.wrappers import TimeLimit as GymTimeLimit
 
+from CustomStarCraftEnv.CustomStarCraftEnv import CustomStarCraftEnv
+
 
 def env_fn(env, **kwargs) -> MultiAgentEnv:
     return env(**kwargs)
 
 
 REGISTRY = {"sc2wrapped": partial(env_fn, env=StarCraftCapabilityEnvWrapper),
-            "sc2": partial(env_fn, env=StarCraft2Env)}
+            "sc2": partial(env_fn, env=StarCraft2Env),
+            "sc2custom": partial(env_fn, env=CustomStarCraftEnv)}
 
 if sys.platform == "linux":
     os.environ.setdefault(
