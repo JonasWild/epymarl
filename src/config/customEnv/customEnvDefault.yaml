@@ -1,1 +1,14 @@
-property: "value"
+behaviours:
+  stayTogether:
+    reward: 10
+    enabled: true
+  teamUp:
+    reward: 10
+    enabled: true
+  notAttacking:
+    reward: -10
+    enabled: true
+  attackingSame:
+    reward: 10
+    enabled: true
+

@@ -1,0 +1,187 @@
+{
+  "episode": {
+    "steps": [
+      1115,
+      2165
+    ],
+    "timestamps": [
+      "2023-08-04T09:34:07.233806",
+      "2023-08-04T09:34:23.288531"
+    ],
+    "values": [
+      11,
+      21
+    ]
+  },
+  "epsilon": {
+    "steps": [
+      54,
+      1115,
+      2165
+    ],
+    "timestamps": [
+      "2023-08-04T09:30:45.492433",
+      "2023-08-04T09:34:07.233806",
+      "2023-08-04T09:34:23.287530"
+    ],
+    "values": [
+      1.0,
+      0.981703,
+      0.9598720000000001
+    ]
+  },
+  "test_attacking_same_enemy_pos_mean": {
+    "steps": [
+      54
+    ],
+    "timestamps": [
+      "2023-08-04T09:33:50.891004"
+    ],
+    "values": [
+      83.78378378378379
+    ]
+  },
+  "test_battle_won_mean": {
+    "steps": [
+      54
+    ],
+    "timestamps": [
+      "2023-08-04T09:33:50.890637"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_custom_coop_metrics_summed_mean": {
+    "steps": [
+      54
+    ],
+    "timestamps": [
+      "2023-08-04T09:33:50.892010"
+    ],
+    "values": [
+      83.57360112111311
+    ]
+  },
+  "test_dead_allies_mean": {
+    "steps": [
+      54
+    ],
+    "timestamps": [
+      "2023-08-04T09:33:50.891004"
+    ],
+    "values": [
+      3.76
+    ]
+  },
+  "test_dead_enemies_mean": {
+    "steps": [
+      54
+    ],
+    "timestamps": [
+      "2023-08-04T09:33:50.891004"
+    ],
+    "values": [
+      5.79
+    ]
+  },
+  "test_ep_length_mean": {
+    "steps": [
+      54
+    ],
+    "timestamps": [
+      "2023-08-04T09:33:50.891004"
+    ],
+    "values": [
+      133.73
+    ]
+  },
+  "test_not_attacking_summed_neg_mean": {
+    "steps": [
+      54
+    ],
+    "timestamps": [
+      "2023-08-04T09:33:50.891004"
+    ],
+    "values": [
+      -0.2702702702702703
+    ]
+  },
+  "test_only_built_in_return_mean": {
+    "steps": [
+      54
+    ],
+    "timestamps": [
+      "2023-08-04T09:33:50.890134"
+    ],
+    "values": [
+      7.8464422976090615
+    ]
+  },
+  "test_only_built_in_return_std": {
+    "steps": [
+      54
+    ],
+    "timestamps": [
+      "2023-08-04T09:33:50.890134"
+    ],
+    "values": [
+      2.0894268993153133
+    ]
+  },
+  "test_only_custom_return_mean": {
+    "steps": [
+      54
+    ],
+    "timestamps": [
+      "2023-08-04T09:33:50.889134"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_only_custom_return_std": {
+    "steps": [
+      54
+    ],
+    "timestamps": [
+      "2023-08-04T09:33:50.889134"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_running_to_enemy_pos_mean": {
+    "steps": [
+      54
+    ],
+    "timestamps": [
+      "2023-08-04T09:33:50.892010"
+    ],
+    "values": [
+      0.024006474823565094
+    ]
+  },
+  "test_summed_return_mean": {
+    "steps": [
+      54
+    ],
+    "timestamps": [
+      "2023-08-04T09:33:50.889134"
+    ],
+    "values": [
+      7.8464422976090615
+    ]
+  },
+  "test_summed_return_std": {
+    "steps": [
+      54
+    ],
+    "timestamps": [
+      "2023-08-04T09:33:50.889134"
+    ],
+    "values": [
+      2.0894268993153133
+    ]
+  }
+}

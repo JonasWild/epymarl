@@ -1,0 +1,113 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src",
+    "dependencies": [
+      "munch==2.5.0",
+      "numpy==1.23.1",
+      "sacred==0.8.2",
+      "torch==2.0.1"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl_0",
+    "repositories": [
+      {
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      },
+      {
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      },
+      {
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      }
+    ],
+    "sources": [
+      [
+        "main.py",
+        "_sources\\main_241fc96eda601c2b11588dda98a53d59.py"
+      ],
+      [
+        "run.py",
+        "_sources\\run_6df4177238aa94b24bef38e04727c0ac.py"
+      ],
+      [
+        "utils\\logging.py",
+        "_sources\\logging_2fa012ebccecc6a578de076021c19abe.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\sacred\\config\\captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\main.py\", line 146, in my_main\n    run(_run, config, _log)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\run.py\", line 60, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\run.py\", line 192, in run_sequential\n    episode_batch = runner.run(test_mode=False)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\runners\\episode_runner.py\", line 188, in run\n    reduced_obs = np.mean(obs_np, axis=(0, 2))\n",
+    "  File \"<__array_function__ internals>\", line 180, in mean\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\numpy\\core\\fromnumeric.py\", line 3432, in mean\n    return _methods._mean(a, axis=axis, dtype=dtype,\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\numpy\\core\\_methods.py\", line 168, in _mean\n    rcount = _count_reduce_items(arr, axis, keepdims=keepdims, where=where)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\numpy\\core\\_methods.py\", line 76, in _count_reduce_items\n    items *= arr.shape[mu.normalize_axis_index(ax, arr.ndim)]\n",
+    "numpy.AxisError: axis 2 is out of bounds for array of dimension 2\n"
+  ],
+  "heartbeat": "2023-08-04T09:03:53.892990",
+  "host": {
+    "ENV": {},
+    "cpu": "Unknown",
+    "gpus": {
+      "driver_version": "531.79",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 960",
+          "persistence_mode": false,
+          "total_memory": 2048
+        }
+      ]
+    },
+    "hostname": "DESKTOP-1HDPUO6",
+    "os": [
+      "Windows",
+      "Windows-10-10.0.22621-SP0"
+    ],
+    "python_version": "3.8.16"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2023-08-04T08:16:05.133140",
+  "status": "FAILED",
+  "stop_time": "2023-08-04T09:03:53.916749"
+}

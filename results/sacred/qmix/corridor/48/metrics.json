@@ -1,0 +1,247 @@
+{
+  "epsilon": {
+    "steps": [
+      38,
+      10051
+    ],
+    "timestamps": [
+      "2023-08-27T10:43:45.296843",
+      "2023-08-27T11:00:59.468396"
+    ],
+    "values": [
+      1.0,
+      0.809658
+    ]
+  },
+  "grad_norm": {
+    "steps": [
+      1136
+    ],
+    "timestamps": [
+      "2023-08-27T10:53:07.079134"
+    ],
+    "values": [
+      8.006821632385254
+    ]
+  },
+  "loss": {
+    "steps": [
+      1136
+    ],
+    "timestamps": [
+      "2023-08-27T10:53:07.079134"
+    ],
+    "values": [
+      1.5327386856079102
+    ]
+  },
+  "q_taken_mean": {
+    "steps": [
+      1136
+    ],
+    "timestamps": [
+      "2023-08-27T10:53:07.079134"
+    ],
+    "values": [
+      0.015580449305789572
+    ]
+  },
+  "target_max_qvals_mean": {
+    "steps": [
+      1136
+    ],
+    "timestamps": [
+      "2023-08-27T10:53:07.080136"
+    ],
+    "values": [
+      0.08214435666939462
+    ]
+  },
+  "target_mean": {
+    "steps": [
+      1136
+    ],
+    "timestamps": [
+      "2023-08-27T10:53:07.080136"
+    ],
+    "values": [
+      0.11144488518226875
+    ]
+  },
+  "td_error_abs": {
+    "steps": [
+      1136
+    ],
+    "timestamps": [
+      "2023-08-27T10:53:07.079134"
+    ],
+    "values": [
+      1.1182013498225682
+    ]
+  },
+  "test_attacking_same_enemy_pos_mean": {
+    "steps": [
+      38
+    ],
+    "timestamps": [
+      "2023-08-27T10:52:12.584400"
+    ],
+    "values": [
+      0.44382352941176473
+    ]
+  },
+  "test_battle_won_mean": {
+    "steps": [
+      38
+    ],
+    "timestamps": [
+      "2023-08-27T10:51:59.615777"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_custom_coop_metrics_summed_mean": {
+    "steps": [
+      38
+    ],
+    "timestamps": [
+      "2023-08-27T10:52:12.584400"
+    ],
+    "values": [
+      1.1260331370659613
+    ]
+  },
+  "test_dead_allies_mean": {
+    "steps": [
+      38
+    ],
+    "timestamps": [
+      "2023-08-27T10:51:58.031993"
+    ],
+    "values": [
+      5.99
+    ]
+  },
+  "test_dead_enemies_mean": {
+    "steps": [
+      38
+    ],
+    "timestamps": [
+      "2023-08-27T10:51:58.668848"
+    ],
+    "values": [
+      2.79
+    ]
+  },
+  "test_ep_length_mean": {
+    "steps": [
+      38
+    ],
+    "timestamps": [
+      "2023-08-27T10:52:00.732751"
+    ],
+    "values": [
+      45.43
+    ]
+  },
+  "test_not_attacking_summed_neg_mean": {
+    "steps": [
+      38
+    ],
+    "timestamps": [
+      "2023-08-27T10:52:12.584400"
+    ],
+    "values": [
+      -0.0017647058823529412
+    ]
+  },
+  "test_only_built_in_return_mean": {
+    "steps": [
+      38
+    ],
+    "timestamps": [
+      "2023-08-27T10:51:47.620779"
+    ],
+    "values": [
+      29.059966567993165
+    ]
+  },
+  "test_only_built_in_return_std": {
+    "steps": [
+      38
+    ],
+    "timestamps": [
+      "2023-08-27T10:51:48.210419"
+    ],
+    "values": [
+      4.352290591335783
+    ]
+  },
+  "test_only_custom_return_mean": {
+    "steps": [
+      38
+    ],
+    "timestamps": [
+      "2023-08-27T10:51:42.747936"
+    ],
+    "values": [
+      26.899
+    ]
+  },
+  "test_only_custom_return_std": {
+    "steps": [
+      38
+    ],
+    "timestamps": [
+      "2023-08-27T10:51:44.436663"
+    ],
+    "values": [
+      4.302080775624745
+    ]
+  },
+  "test_running_to_enemy_pos_mean": {
+    "steps": [
+      38
+    ],
+    "timestamps": [
+      "2023-08-27T10:52:12.584400"
+    ],
+    "values": [
+      0.0004768738400410203
+    ]
+  },
+  "test_summed_return_mean": {
+    "steps": [
+      38
+    ],
+    "timestamps": [
+      "2023-08-27T10:51:36.345904"
+    ],
+    "values": [
+      55.958966567993166
+    ]
+  },
+  "test_summed_return_std": {
+    "steps": [
+      38
+    ],
+    "timestamps": [
+      "2023-08-27T10:51:36.350903"
+    ],
+    "values": [
+      8.611858497097412
+    ]
+  },
+  "test_team_up_pos_mean": {
+    "steps": [
+      38
+    ],
+    "timestamps": [
+      "2023-08-27T10:52:12.583396"
+    ],
+    "values": [
+      0.6823529411764708
+    ]
+  }
+}

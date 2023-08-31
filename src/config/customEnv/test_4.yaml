@@ -1,0 +1,8 @@
+allow_custom_rewards: True
+punish_only_agent_not_attacking: False
+reward_movement: False
+reward_attacking_same_enemy: True
+
+punish_only_agent_not_attacking_multiplier: 1
+reward_movement_multiplier: 0.1
+reward_attacking_same_enemy_multiplier: 50

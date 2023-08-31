@@ -2,28 +2,28 @@
   "artifacts": [],
   "command": "my_main",
   "experiment": {
-    "base_dir": "C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src",
+    "base_dir": "C:\\Users\\jonas\\Documents\\Github\\epymarl\\src",
     "dependencies": [
       "munch==2.5.0",
       "numpy==1.23.1",
       "sacred==0.8.2",
-      "torch==1.12.1"
+      "torch==2.0.1"
     ],
     "mainfile": "main.py",
-    "name": "pymarl",
+    "name": "pymarl_0",
     "repositories": [
       {
-        "commit": "959cd1b40d663f9e76c90971e1d5beb0afaed1fe",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
         "url": "https://github.com/JonasWild/epymarl.git"
       },
       {
-        "commit": "959cd1b40d663f9e76c90971e1d5beb0afaed1fe",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
         "url": "https://github.com/JonasWild/epymarl.git"
       },
       {
-        "commit": "959cd1b40d663f9e76c90971e1d5beb0afaed1fe",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
         "url": "https://github.com/JonasWild/epymarl.git"
       }
@@ -31,19 +31,19 @@
     "sources": [
       [
         "main.py",
-        "_sources\\main_245ce779fbbfe83ab50c8eec954e3675.py"
+        "_sources\\main_3d0e7cac914bdd1050682aaf8bae3d77.py"
       ],
       [
         "run.py",
-        "_sources\\run_dfd7217376a21c5ba919c90f64425233.py"
+        "_sources\\run_6df4177238aa94b24bef38e04727c0ac.py"
       ],
       [
         "utils\\logging.py",
-        "_sources\\logging_7ddc698bb74674bae897bfdc5662ed00.py"
+        "_sources\\logging_19831644a2526c55c2bc12dd75dc94d8.py"
       ]
     ]
   },
-  "heartbeat": "2023-06-19T15:16:00.058006",
+  "heartbeat": "2023-08-23T09:02:44.857453",
   "host": {
     "ENV": {},
     "cpu": "Unknown",
@@ -94,7 +94,7 @@
   },
   "resources": [],
   "result": null,
-  "start_time": "2023-06-19T15:15:47.180469",
+  "start_time": "2023-08-23T08:59:35.844365",
   "status": "INTERRUPTED",
-  "stop_time": "2023-06-19T15:16:00.060512"
+  "stop_time": "2023-08-23T09:02:44.860452"
 }

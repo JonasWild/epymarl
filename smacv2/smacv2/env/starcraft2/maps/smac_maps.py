@@ -254,6 +254,16 @@ map_param_registry = {
         "map_type": "zealots",
         "map_name": "smaller_corridor_spawn_behind_2zealot_vs_8zerg",
     },
+    "tank_test": {
+        "n_agents": 4,
+        "n_enemies": 9,
+        "limit": 400,
+        "a_race": "P",
+        "b_race": "Z",
+        "unit_type_bits": 0,
+        "map_type": "zealots",
+        "map_name": "tank_test",
+    },
     "6h_vs_8z": {
         "n_agents": 6,
         "n_enemies": 8,

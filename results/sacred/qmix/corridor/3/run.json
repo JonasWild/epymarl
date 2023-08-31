@@ -2,62 +2,59 @@
   "artifacts": [],
   "command": "my_main",
   "experiment": {
-    "base_dir": "C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src",
+    "base_dir": "C:\\Users\\jonas\\Documents\\Github\\epymarl\\src",
     "dependencies": [
       "munch==2.5.0",
       "numpy==1.23.1",
       "sacred==0.8.2",
-      "torch==1.12.1"
+      "torch==2.0.1"
     ],
     "mainfile": "main.py",
-    "name": "pymarl",
+    "name": "pymarl_0",
     "repositories": [
       {
-        "commit": "f355a55262ac9afecdb53368fec6337c549cc160",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
-        "url": "https://github.com/uoe-agents/epymarl.git"
+        "url": "https://github.com/JonasWild/epymarl.git"
       },
       {
-        "commit": "f355a55262ac9afecdb53368fec6337c549cc160",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
-        "url": "https://github.com/uoe-agents/epymarl.git"
+        "url": "https://github.com/JonasWild/epymarl.git"
       },
       {
-        "commit": "f355a55262ac9afecdb53368fec6337c549cc160",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
-        "url": "https://github.com/uoe-agents/epymarl.git"
+        "url": "https://github.com/JonasWild/epymarl.git"
       }
     ],
     "sources": [
       [
         "main.py",
-        "_sources\\main_253d6251cbb694cc4ee7c85b420002f6.py"
+        "_sources\\main_ed491589284d1134012f634ec6d9fc69.py"
       ],
       [
         "run.py",
-        "_sources\\run_0d4473baa0341520abe28c1d83d7b859.py"
+        "_sources\\run_6df4177238aa94b24bef38e04727c0ac.py"
       ],
       [
         "utils\\logging.py",
-        "_sources\\logging_7ddc698bb74674bae897bfdc5662ed00.py"
+        "_sources\\logging_19831644a2526c55c2bc12dd75dc94d8.py"
       ]
     ]
   },
   "fail_trace": [
     "Traceback (most recent call last):\n",
     "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\sacred\\config\\captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\main.py\", line 44, in my_main\n    run(_run, config, _log)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\run.py\", line 60, in run\n    run_sequential(args=args, logger=logger)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\run.py\", line 92, in run_sequential\n    runner = r_REGISTRY[args.runner](args=args, logger=logger)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\runners\\episode_runner.py\", line 15, in __init__\n    self.env = env_REGISTRY[self.args.env](**self.args.env_args)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\envs\\__init__.py\", line 16, in env_fn\n    return env(**kwargs)\n",
-    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\smacv2\\env\\starcraft2\\wrapper.py\", line 10, in __init__\n    self._parse_distribution_config()\n",
-    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\smacv2\\env\\starcraft2\\wrapper.py\", line 25, in _parse_distribution_config\n    distribution = get_distribution(config[\"dist_type\"])(config)\n",
-    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\smacv2\\env\\starcraft2\\distributions.py\", line 363, in __init__\n    self.reflect_distribution = ReflectPositionDistribution(config)\n",
-    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\smacv2\\env\\starcraft2\\distributions.py\", line 236, in __init__\n    assert (\n",
-    "AssertionError: Number of enemies must be >= number of units\n"
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\main.py\", line 146, in my_main\n    run(_run, config, _log)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\run.py\", line 60, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\run.py\", line 192, in run_sequential\n    episode_batch = runner.run(test_mode=False)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\runners\\episode_runner.py\", line 109, in run\n    (custom_pos_reward, custom_neg_reward), stats = self.env.evaluate_cooperative_behaviour(actions, obs)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\CustomStarCraftEnv\\CustomStarCraftEnv.py\", line 40, in evaluate_cooperative_behaviour\n    pos_reward, neg_reward = behaviour.evaluate(self.agents, obs, actions)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\CustomStarCraftEnv\\Behaviours\\TeamUpBehaviourOnSC2Map.py\", line 26, in evaluate\n    for index_agent_1, (id_agent_1, agent_1) in range(len(agents)):\n",
+    "TypeError: cannot unpack non-iterable int object\n"
   ],
-  "heartbeat": "2023-06-19T08:55:15.425660",
+  "heartbeat": "2023-08-21T15:41:42.503282",
   "host": {
     "ENV": {},
     "cpu": "Unknown",
@@ -108,7 +105,7 @@
   },
   "resources": [],
   "result": null,
-  "start_time": "2023-06-19T08:55:15.406660",
+  "start_time": "2023-08-21T15:41:03.099422",
   "status": "FAILED",
-  "stop_time": "2023-06-19T08:55:15.429661"
+  "stop_time": "2023-08-21T15:41:42.506280"
 }

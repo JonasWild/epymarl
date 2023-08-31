@@ -1,0 +1,275 @@
+{
+  "episode": {
+    "steps": [
+      1156,
+      2166
+    ],
+    "timestamps": [
+      "2023-08-04T12:41:29.393679",
+      "2023-08-04T12:41:45.144310"
+    ],
+    "values": [
+      12,
+      24
+    ]
+  },
+  "epsilon": {
+    "steps": [
+      65,
+      1156,
+      2166
+    ],
+    "timestamps": [
+      "2023-08-04T12:39:59.840351",
+      "2023-08-04T12:41:29.392679",
+      "2023-08-04T12:41:45.144310"
+    ],
+    "values": [
+      1.0,
+      0.98271,
+      0.959644
+    ]
+  },
+  "grad_norm": {
+    "steps": [
+      2879
+    ],
+    "timestamps": [
+      "2023-08-04T12:42:00.416896"
+    ],
+    "values": [
+      2.8670310974121094
+    ]
+  },
+  "loss": {
+    "steps": [
+      2879
+    ],
+    "timestamps": [
+      "2023-08-04T12:42:00.415893"
+    ],
+    "values": [
+      2.776867628097534
+    ]
+  },
+  "q_taken_mean": {
+    "steps": [
+      2879
+    ],
+    "timestamps": [
+      "2023-08-04T12:42:00.416896"
+    ],
+    "values": [
+      0.02102505841906098
+    ]
+  },
+  "target_max_qvals_max": {
+    "steps": [
+      2879
+    ],
+    "timestamps": [
+      "2023-08-04T12:42:00.417896"
+    ],
+    "values": [
+      0.5827906727790833
+    ]
+  },
+  "target_max_qvals_mean": {
+    "steps": [
+      2879
+    ],
+    "timestamps": [
+      "2023-08-04T12:42:00.417896"
+    ],
+    "values": [
+      0.041191207074837456
+    ]
+  },
+  "target_max_qvals_min": {
+    "steps": [
+      2879
+    ],
+    "timestamps": [
+      "2023-08-04T12:42:00.417896"
+    ],
+    "values": [
+      -0.13936802744865417
+    ]
+  },
+  "target_mean": {
+    "steps": [
+      2879
+    ],
+    "timestamps": [
+      "2023-08-04T12:42:00.416896"
+    ],
+    "values": [
+      0.11532766614452175
+    ]
+  },
+  "td_error_abs": {
+    "steps": [
+      2879
+    ],
+    "timestamps": [
+      "2023-08-04T12:42:00.416896"
+    ],
+    "values": [
+      0.5560088613125217
+    ]
+  },
+  "test_attacking_same_enemy_pos_mean": {
+    "steps": [
+      65
+    ],
+    "timestamps": [
+      "2023-08-04T12:41:12.667707"
+    ],
+    "values": [
+      97.5
+    ]
+  },
+  "test_battle_won_mean": {
+    "steps": [
+      65
+    ],
+    "timestamps": [
+      "2023-08-04T12:41:12.663556"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_custom_coop_metrics_summed_mean": {
+    "steps": [
+      65
+    ],
+    "timestamps": [
+      "2023-08-04T12:41:12.668710"
+    ],
+    "values": [
+      97.49104855181649
+    ]
+  },
+  "test_dead_allies_mean": {
+    "steps": [
+      65
+    ],
+    "timestamps": [
+      "2023-08-04T12:41:12.666648"
+    ],
+    "values": [
+      4.0
+    ]
+  },
+  "test_dead_enemies_mean": {
+    "steps": [
+      65
+    ],
+    "timestamps": [
+      "2023-08-04T12:41:12.667707"
+    ],
+    "values": [
+      5.72
+    ]
+  },
+  "test_ep_length_mean": {
+    "steps": [
+      65
+    ],
+    "timestamps": [
+      "2023-08-04T12:41:12.667707"
+    ],
+    "values": [
+      40.28
+    ]
+  },
+  "test_not_attacking_summed_neg_mean": {
+    "steps": [
+      65
+    ],
+    "timestamps": [
+      "2023-08-04T12:41:12.667707"
+    ],
+    "values": [
+      -0.05
+    ]
+  },
+  "test_only_built_in_return_mean": {
+    "steps": [
+      65
+    ],
+    "timestamps": [
+      "2023-08-04T12:41:12.662556"
+    ],
+    "values": [
+      7.975390756082213
+    ]
+  },
+  "test_only_built_in_return_std": {
+    "steps": [
+      65
+    ],
+    "timestamps": [
+      "2023-08-04T12:41:12.662556"
+    ],
+    "values": [
+      1.7629814962228845
+    ]
+  },
+  "test_only_custom_return_mean": {
+    "steps": [
+      65
+    ],
+    "timestamps": [
+      "2023-08-04T12:41:12.662556"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_only_custom_return_std": {
+    "steps": [
+      65
+    ],
+    "timestamps": [
+      "2023-08-04T12:41:12.662556"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_running_to_enemy_pos_mean": {
+    "steps": [
+      65
+    ],
+    "timestamps": [
+      "2023-08-04T12:41:12.667707"
+    ],
+    "values": [
+      0.016208016760647297
+    ]
+  },
+  "test_summed_return_mean": {
+    "steps": [
+      65
+    ],
+    "timestamps": [
+      "2023-08-04T12:41:12.661556"
+    ],
+    "values": [
+      7.975390756082213
+    ]
+  },
+  "test_summed_return_std": {
+    "steps": [
+      65
+    ],
+    "timestamps": [
+      "2023-08-04T12:41:12.661556"
+    ],
+    "values": [
+      1.7629814962228845
+    ]
+  }
+}

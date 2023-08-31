@@ -1,0 +1,166 @@
+{
+  "epsilon": [
+    1.0
+  ],
+  "epsilon_T": [
+    36
+  ],
+  "grad_norm": [
+    8.51478099822998
+  ],
+  "grad_norm_T": [
+    1117
+  ],
+  "loss": [
+    1.5446151494979858
+  ],
+  "loss_T": [
+    1117
+  ],
+  "q_taken_mean": [
+    -0.02206513562226644
+  ],
+  "q_taken_mean_T": [
+    1117
+  ],
+  "target_max_qvals_mean": [
+    0.06803669099913039
+  ],
+  "target_max_qvals_mean_T": [
+    1117
+  ],
+  "target_mean": [
+    0.07849507230817293
+  ],
+  "target_mean_T": [
+    1117
+  ],
+  "td_error_abs": [
+    0.7720994257777529
+  ],
+  "td_error_abs_T": [
+    1117
+  ],
+  "test_attacking_same_enemy_pos_mean": [
+    0.2718
+  ],
+  "test_attacking_same_enemy_pos_mean_T": [
+    36
+  ],
+  "test_battle_won_mean": [
+    0.0
+  ],
+  "test_battle_won_mean_T": [
+    36
+  ],
+  "test_custom_coop_metrics_summed_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 4.952667067365497
+    }
+  ],
+  "test_custom_coop_metrics_summed_mean_T": [
+    36
+  ],
+  "test_dead_allies_mean": [
+    6.0
+  ],
+  "test_dead_allies_mean_T": [
+    36
+  ],
+  "test_dead_enemies_mean": [
+    1.09
+  ],
+  "test_dead_enemies_mean_T": [
+    36
+  ],
+  "test_ep_length_mean": [
+    49.08
+  ],
+  "test_ep_length_mean_T": [
+    36
+  ],
+  "test_not_attacking_summed_neg_mean": [
+    -0.0002
+  ],
+  "test_not_attacking_summed_neg_mean_T": [
+    36
+  ],
+  "test_only_built_in_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.906888656616211
+    }
+  ],
+  "test_only_built_in_return_mean_T": [
+    36
+  ],
+  "test_only_built_in_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.8997067323845722
+    }
+  ],
+  "test_only_built_in_return_std_T": [
+    36
+  ],
+  "test_only_custom_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 203.49
+    }
+  ],
+  "test_only_custom_return_mean_T": [
+    36
+  ],
+  "test_only_custom_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 30.88187008586106
+    }
+  ],
+  "test_only_custom_return_std_T": [
+    36
+  ],
+  "test_running_to_enemy_pos_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.00036156428620219246
+    }
+  ],
+  "test_running_to_enemy_pos_mean_T": [
+    36
+  ],
+  "test_summed_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 204.3968886566162
+    }
+  ],
+  "test_summed_return_mean_T": [
+    36
+  ],
+  "test_summed_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 30.749916311973482
+    }
+  ],
+  "test_summed_return_std_T": [
+    36
+  ],
+  "test_team_up_pos_mean": [
+    4.68
+  ],
+  "test_team_up_pos_mean_T": [
+    36
+  ]
+}

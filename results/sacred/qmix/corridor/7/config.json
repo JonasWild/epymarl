@@ -9,34 +9,20 @@
   "buffer_size": 5000,
   "checkpoint_path": "",
   "double_q": true,
-  "env": "sc2",
+  "env": "sc2custom",
   "env_args": {
-    "capability_config": {
-      "enemy_gen": {
-        "dist_type": "all_teams",
-        "unit_types": [
-          "zergling"
-        ]
-      },
-      "n_enemies": 2,
-      "n_units": 2,
-      "start_positions": {
-        "dist_type": "surrounded_and_reflect",
-        "map_x": 32,
-        "map_y": 32,
-        "p": 0.5
-      },
-      "team_gen": {
-        "dist_type": "all_teams",
-        "observe": true,
-        "unit_types": [
-          "zealot"
-        ]
-      }
-    },
     "continuing_episode": false,
+    "custom_env_args": {
+      "allow_custom_rewards": false,
+      "punish_only_agent_not_attacking": false,
+      "punish_only_agent_not_attacking_multiplier": 0.01,
+      "reward_attacking_same_enemy": false,
+      "reward_attacking_same_enemy_multiplier": 0.01,
+      "reward_movement": false,
+      "reward_movement_multiplier": 0.001
+    },
     "debug": false,
-    "difficulty": "1",
+    "difficulty": "7",
     "game_version": null,
     "heuristic_ai": false,
     "heuristic_rest": false,
@@ -77,10 +63,10 @@
   "hypernet_layers": 2,
   "label": "default_label",
   "learner": "q_learner",
-  "learner_log_interval": 5000,
+  "learner_log_interval": 10000,
   "load_step": 0,
   "local_results_path": "results",
-  "log_interval": 5000,
+  "log_interval": 50000,
   "lr": 0.0005,
   "mac": "basic_mac",
   "mixer": "qmix",
@@ -94,17 +80,17 @@
   "render": false,
   "repeat_id": 1,
   "runner": "episode",
-  "runner_log_interval": 5000,
+  "runner_log_interval": 10000,
   "save_model": true,
   "save_model_interval": 50000,
   "save_replay": true,
-  "seed": 650132272,
+  "seed": 861914042,
   "standardise_returns": false,
   "standardise_rewards": true,
   "t_max": 2050000,
   "target_update_interval_or_tau": 200,
   "test_greedy": true,
-  "test_interval": 5000,
+  "test_interval": 50000,
   "test_nepisode": 100,
   "use_cuda": true,
   "use_rnn": false,

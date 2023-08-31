@@ -1,4 +1,7 @@
 import copy
+
+import numpy as np
+import torch
 from components.episode_buffer import EpisodeBatch
 from modules.mixers.vdn import VDNMixer
 from modules.mixers.qmix import QMixer
@@ -134,6 +137,18 @@ class QLearner:
             self.logger.log_stat("td_error_abs", (masked_td_error.abs().sum().item()/mask_elems), t_env)
             self.logger.log_stat("q_taken_mean", (chosen_action_qvals * mask).sum().item()/(mask_elems * self.args.n_agents), t_env)
             self.logger.log_stat("target_mean", (targets * mask).sum().item()/(mask_elems * self.args.n_agents), t_env)
+
+            # ======================Custom log stats Below======================
+            # Log global value function (Q_tot) statistics
+            self.logger.log_stat("target_max_qvals_mean", (target_max_qvals * mask).sum().item() / (mask_elems * self.args.n_agents), t_env)
+            #self.logger.log_stat("target_max_qvals_min", (target_max_qvals * mask).min().item(), t_env)
+            #self.logger.log_stat("target_max_qvals_max", (target_max_qvals * mask).max().item(), t_env)
+
+            #chose_action_qvals_mean = torch.mean(chosen_action_qvals, dim=(0, 1)).tolist()[0]
+            #self.logger.log_stat("chosen_action_qvals", chose_action_qvals_mean, t_env)
+            #col_values_target_mac_out = torch.mean(target_mac_out, dim=(0, 1, 2)).tolist()
+            #self.logger.log_heatmap_stat("target_mac_out", col_values=col_values_target_mac_out)
+
             self.log_stats_t = t_env
 
     def _update_targets_hard(self):

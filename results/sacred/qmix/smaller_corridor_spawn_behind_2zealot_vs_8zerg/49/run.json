@@ -2,7 +2,7 @@
   "artifacts": [],
   "command": "my_main",
   "experiment": {
-    "base_dir": "C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src",
+    "base_dir": "C:\\Users\\jonas\\Documents\\Github\\epymarl\\src",
     "dependencies": [
       "munch==2.5.0",
       "numpy==1.23.1",
@@ -10,20 +10,20 @@
       "torch==2.0.1"
     ],
     "mainfile": "main.py",
-    "name": "pymarl",
+    "name": "pymarl_0",
     "repositories": [
       {
-        "commit": "f12891d85d0e36e9261ea91ff25bdca74f3a8698",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
         "url": "https://github.com/JonasWild/epymarl.git"
       },
       {
-        "commit": "f12891d85d0e36e9261ea91ff25bdca74f3a8698",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
         "url": "https://github.com/JonasWild/epymarl.git"
       },
       {
-        "commit": "f12891d85d0e36e9261ea91ff25bdca74f3a8698",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
         "url": "https://github.com/JonasWild/epymarl.git"
       }
@@ -31,34 +31,19 @@
     "sources": [
       [
         "main.py",
-        "_sources\\main_8d5ae448eaa6a4c209f5b3436cb8ca22.py"
+        "_sources\\main_ef7be7d067f997181997a35d472e4644.py"
       ],
       [
         "run.py",
-        "_sources\\run_10ef91ac0724d4b44e79eaf00864b243.py"
+        "_sources\\run_6df4177238aa94b24bef38e04727c0ac.py"
       ],
       [
         "utils\\logging.py",
-        "_sources\\logging_b3fda4b7635b953cb83d65bbf1105552.py"
+        "_sources\\logging_19831644a2526c55c2bc12dd75dc94d8.py"
       ]
     ]
   },
-  "fail_trace": [
-    "Traceback (most recent call last):\n",
-    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\sacred\\config\\captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\main.py\", line 53, in my_main\n    run(_run, config, _log)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\run.py\", line 60, in run\n    run_sequential(args=args, logger=logger)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\run.py\", line 193, in run_sequential\n    episode_batch = runner.run(test_mode=False)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\runners\\episode_runner.py\", line 123, in run\n    self._log(cur_returns, cur_stats, log_prefix, heatmaps=heatmaps)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\runners\\episode_runner.py\", line 142, in _log\n    self.logger.log_heatmap(heatmap.name, heatmap.data)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\utils\\logging.py\", line 59, in log_heatmap\n    self.tb_image_logger(heatmap_name, image_tensor.unsqueeze(0), 0)\n",
-    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\tensorboard_logger\\tensorboard_logger.py\", line 324, in log_images\n    _default_logger.log_images(name, images, step=step)\n",
-    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\tensorboard_logger\\tensorboard_logger.py\", line 135, in log_images\n    summary = self._image_summary(tf_name, images, step=step)\n",
-    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\tensorboard_logger\\tensorboard_logger.py\", line 162, in _image_summary\n    Image.fromarray(img).save(s, format=\"png\")\n",
-    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\PIL\\Image.py\", line 3078, in fromarray\n    arr = obj.__array_interface__\n",
-    "AttributeError: 'Tensor' object has no attribute '__array_interface__'\n"
-  ],
-  "heartbeat": "2023-06-28T15:27:43.224243",
+  "heartbeat": "2023-08-31T08:08:54.147447",
   "host": {
     "ENV": {},
     "cpu": "Unknown",
@@ -109,7 +94,7 @@
   },
   "resources": [],
   "result": null,
-  "start_time": "2023-06-28T15:27:15.665401",
-  "status": "FAILED",
-  "stop_time": "2023-06-28T15:27:43.231286"
+  "start_time": "2023-08-31T08:06:39.724518",
+  "status": "INTERRUPTED",
+  "stop_time": "2023-08-31T08:08:54.159014"
 }

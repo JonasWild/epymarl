@@ -7,23 +7,23 @@
       "munch==2.5.0",
       "numpy==1.23.1",
       "sacred==0.8.2",
-      "torch==1.12.1"
+      "torch==2.0.1"
     ],
     "mainfile": "main.py",
-    "name": "pymarl",
+    "name": "pymarl_0",
     "repositories": [
       {
-        "commit": "f12891d85d0e36e9261ea91ff25bdca74f3a8698",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
         "url": "https://github.com/JonasWild/epymarl.git"
       },
       {
-        "commit": "f12891d85d0e36e9261ea91ff25bdca74f3a8698",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
         "url": "https://github.com/JonasWild/epymarl.git"
       },
       {
-        "commit": "f12891d85d0e36e9261ea91ff25bdca74f3a8698",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
         "url": "https://github.com/JonasWild/epymarl.git"
       }
@@ -31,27 +31,19 @@
     "sources": [
       [
         "main.py",
-        "_sources\\main_348522af9bdda4d86fa88b9c57d02c20.py"
+        "_sources\\main_99b990f46a796b395317eb9c232f5a6e.py"
       ],
       [
         "run.py",
-        "_sources\\run_80b94d0e49c5bd3809c30dcd431e65e7.py"
+        "_sources\\run_6df4177238aa94b24bef38e04727c0ac.py"
       ],
       [
         "utils\\logging.py",
-        "_sources\\logging_7ddc698bb74674bae897bfdc5662ed00.py"
+        "_sources\\logging_2fa012ebccecc6a578de076021c19abe.py"
       ]
     ]
   },
-  "fail_trace": [
-    "Traceback (most recent call last):\n",
-    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\sacred\\config\\captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\main.py\", line 53, in my_main\n    run(_run, config, _log)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\run.py\", line 60, in run\n    run_sequential(args=args, logger=logger)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\run.py\", line 118, in run_sequential\n    print(runner.env.get_action_obs())\n",
-    "AttributeError: 'StarCraft2Env' object has no attribute 'get_action_obs'\n"
-  ],
-  "heartbeat": "2023-06-26T13:41:42.592153",
+  "heartbeat": "2023-08-02T10:17:57.191374",
   "host": {
     "ENV": {},
     "cpu": "Unknown",
@@ -102,7 +94,7 @@
   },
   "resources": [],
   "result": null,
-  "start_time": "2023-06-26T13:41:42.514499",
-  "status": "FAILED",
-  "stop_time": "2023-06-26T13:41:42.594153"
+  "start_time": "2023-08-02T08:32:26.959213",
+  "status": "COMPLETED",
+  "stop_time": "2023-08-02T10:17:57.190360"
 }

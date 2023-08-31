@@ -1,3 +1,7 @@
+import copy
+from typing import List, Any
+
+
 def get_zero_index_from_num_array(array):
     """
     Returns the index of the first occurrence of zero in the given array.
@@ -63,3 +67,26 @@ def find_same_indices(numbers):
     indices = {num: index_list for num, index_list in indices.items() if len(index_list) > 1}
 
     return indices
+
+
+def pad_third_dim(lists: List[List[List[Any]]], pad: Any) -> List[List[List[Any]]]:
+    # Flatten nested list and get maximum length
+    max_len = max(len(sublist) for top_list in lists for sublist in top_list)
+
+    # Pad all lists to max length
+    for top_list in lists:
+        for sublist in top_list:
+            sublist.extend([pad] * (max_len - len(sublist)))
+
+    return lists
+
+
+def pad_second_dim(lists: List[List[Any]], pad: Any) -> List[List[Any]]:
+    max_length = max(len(lst) for lst in lists)
+
+    for lst in lists:
+        if len(lst) < max_length:
+            for i in range(max_length - len(lst)):
+                lst.append(pad)
+
+    return lists

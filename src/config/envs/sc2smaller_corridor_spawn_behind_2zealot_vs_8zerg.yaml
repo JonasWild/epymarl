@@ -15,7 +15,7 @@ env_args:
   obs_timestep_number: False
   reward_death_value: 10
   reward_defeat: 0
-  reward_negative_scale: 0.5
+  reward_negative_scale: 0.3
   reward_only_positive: True
   reward_scale: True
   reward_scale_rate: 20
@@ -30,11 +30,14 @@ env_args:
   heuristic_ai: False
   heuristic_rest: False
   debug: False
+  enemy_in_distance: 20
+  behaviour_stayTogether_min_delta: 0.28  # minimum reduced distance between a group of allys to trigger reward
+  behaviour_teamUp_min_delta: 0.12    # minimum reduced distance to a specific ally to trigger reward
 
 test_greedy: True
 test_nepisode: 100
 test_interval: 5000
-log_interval: 5000
+log_interval: 1000
 runner_log_interval: 1000
 learner_log_interval: 1000
-t_max: 2050000
+t_max: 500000 # Stop running after this many timesteps

@@ -2,28 +2,28 @@
   "artifacts": [],
   "command": "my_main",
   "experiment": {
-    "base_dir": "C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src",
+    "base_dir": "C:\\Users\\jonas\\Documents\\Github\\epymarl\\src",
     "dependencies": [
       "munch==2.5.0",
       "numpy==1.23.1",
       "sacred==0.8.2",
-      "torch==1.12.1"
+      "torch==2.0.1"
     ],
     "mainfile": "main.py",
-    "name": "pymarl",
+    "name": "pymarl_0",
     "repositories": [
       {
-        "commit": "f12891d85d0e36e9261ea91ff25bdca74f3a8698",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
         "url": "https://github.com/JonasWild/epymarl.git"
       },
       {
-        "commit": "f12891d85d0e36e9261ea91ff25bdca74f3a8698",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
         "url": "https://github.com/JonasWild/epymarl.git"
       },
       {
-        "commit": "f12891d85d0e36e9261ea91ff25bdca74f3a8698",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
         "url": "https://github.com/JonasWild/epymarl.git"
       }
@@ -31,29 +31,29 @@
     "sources": [
       [
         "main.py",
-        "_sources\\main_8d5ae448eaa6a4c209f5b3436cb8ca22.py"
+        "_sources\\main_bf8633fe69f144e928b1a3b339e16d4b.py"
       ],
       [
         "run.py",
-        "_sources\\run_10ef91ac0724d4b44e79eaf00864b243.py"
+        "_sources\\run_6df4177238aa94b24bef38e04727c0ac.py"
       ],
       [
         "utils\\logging.py",
-        "_sources\\logging_7ddc698bb74674bae897bfdc5662ed00.py"
+        "_sources\\logging_19831644a2526c55c2bc12dd75dc94d8.py"
       ]
     ]
   },
   "fail_trace": [
     "Traceback (most recent call last):\n",
     "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\sacred\\config\\captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\main.py\", line 53, in my_main\n    run(_run, config, _log)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\run.py\", line 60, in run\n    run_sequential(args=args, logger=logger)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\run.py\", line 193, in run_sequential\n    episode_batch = runner.run(test_mode=False)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\runners\\episode_runner.py\", line 78, in run\n    self.env.evaluate_actions()\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\CustomStarCraftEnv\\CustomStarCraftEnv.py\", line 38, in evaluate_actions\n    \"pos_y\": al_unit.pox.y,\n",
-    "AttributeError: 'Unit' object has no attribute 'pox'\n"
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\main.py\", line 146, in my_main\n    run(_run, config, _log)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\run.py\", line 60, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\run.py\", line 92, in run_sequential\n    runner = r_REGISTRY[args.runner](args=args, logger=logger)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\runners\\episode_runner.py\", line 37, in __init__\n    self.init_behaviour_classes()\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\runners\\episode_runner.py\", line 25, in init_behaviour_classes\n    StayTogether.min_delta = self.args.env_args[\"custom_env_args\"][\"behaviour_stayTogether_min_delta\"]\n",
+    "KeyError: 'behaviour_stayTogether_min_delta'\n"
   ],
-  "heartbeat": "2023-06-27T07:23:25.919278",
+  "heartbeat": "2023-08-30T08:17:47.907075",
   "host": {
     "ENV": {},
     "cpu": "Unknown",
@@ -104,7 +104,7 @@
   },
   "resources": [],
   "result": null,
-  "start_time": "2023-06-27T07:22:14.388498",
+  "start_time": "2023-08-30T08:17:47.884892",
   "status": "FAILED",
-  "stop_time": "2023-06-27T07:23:25.922277"
+  "stop_time": "2023-08-30T08:17:47.913074"
 }

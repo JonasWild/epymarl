@@ -7,23 +7,23 @@
       "munch==2.5.0",
       "numpy==1.23.1",
       "sacred==0.8.2",
-      "torch==1.12.1"
+      "torch==2.0.1"
     ],
     "mainfile": "main.py",
-    "name": "pymarl",
+    "name": "pymarl_0",
     "repositories": [
       {
-        "commit": "f12891d85d0e36e9261ea91ff25bdca74f3a8698",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
         "url": "https://github.com/JonasWild/epymarl.git"
       },
       {
-        "commit": "f12891d85d0e36e9261ea91ff25bdca74f3a8698",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
         "url": "https://github.com/JonasWild/epymarl.git"
       },
       {
-        "commit": "f12891d85d0e36e9261ea91ff25bdca74f3a8698",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
         "url": "https://github.com/JonasWild/epymarl.git"
       }
@@ -31,35 +31,19 @@
     "sources": [
       [
         "main.py",
-        "_sources\\main_348522af9bdda4d86fa88b9c57d02c20.py"
+        "_sources\\main_b4529511cc8fbfc0e2ea58fa23035c22.py"
       ],
       [
         "run.py",
-        "_sources\\run_10ef91ac0724d4b44e79eaf00864b243.py"
+        "_sources\\run_6df4177238aa94b24bef38e04727c0ac.py"
       ],
       [
         "utils\\logging.py",
-        "_sources\\logging_7ddc698bb74674bae897bfdc5662ed00.py"
+        "_sources\\logging_2fa012ebccecc6a578de076021c19abe.py"
       ]
     ]
   },
-  "fail_trace": [
-    "Traceback (most recent call last):\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\runners\\episode_runner.py\", line 50, in run\n    self.reset()\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\runners\\episode_runner.py\", line 45, in reset\n    self.env.reset()\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\smacv2\\smacv2\\env\\starcraft2\\starcraft2.py\", line 555, in reset\n    self.init_units(\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\smacv2\\smacv2\\env\\starcraft2\\starcraft2.py\", line 2290, in init_units\n    min_unit_type = min(\n",
-    "ValueError: min() arg is an empty sequence\n",
-    "\nDuring handling of the above exception, another exception occurred:\n\n",
-    "Traceback (most recent call last):\n",
-    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\sacred\\config\\captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\main.py\", line 53, in my_main\n    run(_run, config, _log)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\run.py\", line 60, in run\n    run_sequential(args=args, logger=logger)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\run.py\", line 193, in run_sequential\n    episode_batch = runner.run(test_mode=False)\n",
-    "  File \"C:\\Users\\jonas\\Documents\\epymarl\\epymarl\\src\\runners\\episode_runner.py\", line 52, in run\n    print(e.with_traceback())\n",
-    "TypeError: with_traceback() takes exactly one argument (0 given)\n"
-  ],
-  "heartbeat": "2023-06-26T13:46:54.481349",
+  "heartbeat": "2023-08-03T09:22:21.978488",
   "host": {
     "ENV": {},
     "cpu": "Unknown",
@@ -110,7 +94,7 @@
   },
   "resources": [],
   "result": null,
-  "start_time": "2023-06-26T13:46:45.841897",
-  "status": "FAILED",
-  "stop_time": "2023-06-26T13:46:54.486528"
+  "start_time": "2023-08-03T07:36:33.176896",
+  "status": "COMPLETED",
+  "stop_time": "2023-08-03T09:22:21.978488"
 }

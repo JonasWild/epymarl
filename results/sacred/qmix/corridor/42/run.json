@@ -1,0 +1,149 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "C:\\Users\\jonas\\Documents\\Github\\epymarl\\src",
+    "dependencies": [
+      "munch==2.5.0",
+      "numpy==1.23.1",
+      "sacred==0.8.2",
+      "torch==2.0.1"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl_0",
+    "repositories": [
+      {
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      },
+      {
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      },
+      {
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      }
+    ],
+    "sources": [
+      [
+        "main.py",
+        "_sources\\main_3d0e7cac914bdd1050682aaf8bae3d77.py"
+      ],
+      [
+        "run.py",
+        "_sources\\run_6df4177238aa94b24bef38e04727c0ac.py"
+      ],
+      [
+        "utils\\logging.py",
+        "_sources\\logging_19831644a2526c55c2bc12dd75dc94d8.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\protocol.py\", line 62, in catch_websocket_connection_errors\n    yield\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\protocol.py\", line 179, in _read\n    response_str = self._sock.recv()\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\websocket\\_core.py\", line 362, in recv\n    opcode, data = self.recv_data()\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\websocket\\_core.py\", line 385, in recv_data\n    opcode, frame = self.recv_data_frame(control_frame)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\websocket\\_core.py\", line 406, in recv_data_frame\n    frame = self.recv_frame()\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\websocket\\_core.py\", line 445, in recv_frame\n    return self.frame_buffer.recv_frame()\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\websocket\\_abnf.py\", line 338, in recv_frame\n    self.recv_header()\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\websocket\\_abnf.py\", line 294, in recv_header\n    header = self.recv_strict(2)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\websocket\\_abnf.py\", line 373, in recv_strict\n    bytes_ = self.recv(min(16384, shortage))\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\websocket\\_core.py\", line 529, in _recv\n    return recv(self.sock, bufsize)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\websocket\\_socket.py\", line 122, in recv\n    raise WebSocketConnectionClosedException(\n",
+    "websocket._exceptions.WebSocketConnectionClosedException: Connection to remote host was lost.\n",
+    "\nDuring handling of the above exception, another exception occurred:\n\n",
+    "Traceback (most recent call last):\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\protocol.py\", line 147, in send\n    res = self.send_req(req)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\protocol.py\", line 127, in send_req\n    return self.read()\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\stopwatch.py\", line 205, in _stopwatch\n    return func(*args, **kwargs)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\protocol.py\", line 98, in read\n    response = self._read()\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\protocol.py\", line 179, in _read\n    response_str = self._sock.recv()\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\contextlib.py\", line 131, in __exit__\n    self.gen.throw(type, value, traceback)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\protocol.py\", line 64, in catch_websocket_connection_errors\n    raise ConnectionError(\"Connection already closed. SC2 probably crashed. \"\n",
+    "pysc2.lib.protocol.ConnectionError: Connection already closed. SC2 probably crashed. Check the error log.\n",
+    "\nDuring handling of the above exception, another exception occurred:\n\n",
+    "Traceback (most recent call last):\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\smacv2\\smacv2\\env\\starcraft2\\starcraft2.py\", line 625, in step\n    self._controller.actions(req_actions)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\remote_controller.py\", line 81, in _skip_status\n    return func(self, *args, **kwargs)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\remote_controller.py\", line 95, in _valid_status\n    return func(self, *args, **kwargs)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\remote_controller.py\", line 107, in _catch_game_end\n    return func(self, *args, **kwargs)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\stopwatch.py\", line 205, in _stopwatch\n    return func(*args, **kwargs)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\remote_controller.py\", line 297, in actions\n    return self._client.send(action=req_action)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\protocol.py\", line 149, in send\n    raise ConnectionError(\"Error during %s: %s\" % (name, e))\n",
+    "pysc2.lib.protocol.ConnectionError: Error during action: Connection already closed. SC2 probably crashed. Check the error log.\n",
+    "\nDuring handling of the above exception, another exception occurred:\n\n",
+    "Traceback (most recent call last):\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\sacred\\config\\captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\main.py\", line 146, in my_main\n    run(_run, config, _log)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\run.py\", line 60, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\run.py\", line 224, in run_sequential\n    runner.run(test_mode=True)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\runners\\episode_runner.py\", line 105, in run\n    reward, terminated, env_info = self.env.step(actions[0])\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\smacv2\\smacv2\\env\\starcraft2\\starcraft2.py\", line 638, in step\n    self.full_restart()\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\smacv2\\smacv2\\env\\starcraft2\\starcraft2.py\", line 584, in full_restart\n    self._launch()\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\smacv2\\smacv2\\env\\starcraft2\\starcraft2.py\", line 453, in _launch\n    self._controller.join_game(join)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\remote_controller.py\", line 95, in _valid_status\n    return func(self, *args, **kwargs)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\remote_controller.py\", line 70, in _check_error\n    return check_error(func(*args, **kwargs), error_enum)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\remote_controller.py\", line 61, in check_error\n    raise RequestError(\"%s.%s: '%s'\" % (enum_name, error_name, details), res)\n",
+    "pysc2.lib.remote_controller.RequestError: SC2APIProtocol.ResponseJoinGame.Error.LaunchError: 'Unable to launch game.'\n"
+  ],
+  "heartbeat": "2023-08-24T20:17:24.679179",
+  "host": {
+    "ENV": {},
+    "cpu": "Unknown",
+    "gpus": {
+      "driver_version": "531.79",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 960",
+          "persistence_mode": false,
+          "total_memory": 2048
+        }
+      ]
+    },
+    "hostname": "DESKTOP-1HDPUO6",
+    "os": [
+      "Windows",
+      "Windows-10-10.0.22621-SP0"
+    ],
+    "python_version": "3.8.16"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2023-08-24T18:28:21.433711",
+  "status": "FAILED",
+  "stop_time": "2023-08-24T20:17:24.691964"
+}

@@ -7,23 +7,23 @@
       "munch==2.5.0",
       "numpy==1.23.1",
       "sacred==0.8.2",
-      "torch==1.12.1"
+      "torch==2.0.1"
     ],
     "mainfile": "main.py",
-    "name": "pymarl",
+    "name": "pymarl_2",
     "repositories": [
       {
-        "commit": "f12891d85d0e36e9261ea91ff25bdca74f3a8698",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
         "url": "https://github.com/JonasWild/epymarl.git"
       },
       {
-        "commit": "f12891d85d0e36e9261ea91ff25bdca74f3a8698",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
         "url": "https://github.com/JonasWild/epymarl.git"
       },
       {
-        "commit": "f12891d85d0e36e9261ea91ff25bdca74f3a8698",
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
         "dirty": true,
         "url": "https://github.com/JonasWild/epymarl.git"
       }
@@ -31,19 +31,19 @@
     "sources": [
       [
         "main.py",
-        "_sources\\main_72fce7478d9972100b35698910449562.py"
+        "_sources\\main_b4529511cc8fbfc0e2ea58fa23035c22.py"
       ],
       [
         "run.py",
-        "_sources\\run_10ef91ac0724d4b44e79eaf00864b243.py"
+        "_sources\\run_6df4177238aa94b24bef38e04727c0ac.py"
       ],
       [
         "utils\\logging.py",
-        "_sources\\logging_7ddc698bb74674bae897bfdc5662ed00.py"
+        "_sources\\logging_2fa012ebccecc6a578de076021c19abe.py"
       ]
     ]
   },
-  "heartbeat": "2023-06-26T15:09:07.491676",
+  "heartbeat": "2023-08-03T13:00:47.956545",
   "host": {
     "ENV": {},
     "cpu": "Unknown",
@@ -94,7 +94,7 @@
   },
   "resources": [],
   "result": null,
-  "start_time": "2023-06-26T13:54:22.326298",
-  "status": "INTERRUPTED",
-  "stop_time": "2023-06-26T15:09:07.568251"
+  "start_time": "2023-08-03T11:15:19.782885",
+  "status": "COMPLETED",
+  "stop_time": "2023-08-03T13:00:47.955552"
 }

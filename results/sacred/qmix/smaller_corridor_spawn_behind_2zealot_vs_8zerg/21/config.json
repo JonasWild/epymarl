@@ -11,9 +11,28 @@
   "double_q": true,
   "env": "sc2custom",
   "env_args": {
+    "behaviour_stayTogether_min_delta": 0.4,
+    "behaviour_teamUp_min_delta": 0.4,
     "continuing_episode": false,
     "custom_env_args": {
-      "property": "value"
+      "behaviours": {
+        "attackingSame": {
+          "enabled": false,
+          "reward": 10
+        },
+        "notAttacking": {
+          "enabled": false,
+          "reward": -10
+        },
+        "stayTogether": {
+          "enabled": false,
+          "reward": 10
+        },
+        "teamUp": {
+          "enabled": false,
+          "reward": 10
+        }
+      }
     },
     "debug": false,
     "difficulty": "7",
@@ -33,7 +52,7 @@
     "replay_prefix": "",
     "reward_death_value": 10,
     "reward_defeat": 0,
-    "reward_negative_scale": 0.5,
+    "reward_negative_scale": 0.3,
     "reward_only_positive": true,
     "reward_scale": true,
     "reward_scale_rate": 20,
@@ -60,8 +79,8 @@
   "learner_log_interval": 1000,
   "load_step": 0,
   "local_results_path": "results",
-  "log_interval": 5000,
-  "lr": 0.005,
+  "log_interval": 1000,
+  "lr": 0.001,
   "mac": "basic_mac",
   "mixer": "qmix",
   "mixing_embed_dim": 32,
@@ -74,14 +93,15 @@
   "render": false,
   "repeat_id": 1,
   "runner": "episode",
+  "runner_log_heatmaps_interval": 25000,
   "runner_log_interval": 1000,
   "save_model": true,
   "save_model_interval": 50000,
   "save_replay": true,
-  "seed": 287134607,
+  "seed": 993679175,
   "standardise_returns": false,
   "standardise_rewards": true,
-  "t_max": 2050000,
+  "t_max": 500000,
   "target_update_interval_or_tau": 200,
   "test_greedy": true,
   "test_interval": 5000,

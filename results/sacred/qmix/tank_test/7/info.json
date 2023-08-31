@@ -1,0 +1,136 @@
+{
+  "episode": [
+    10,
+    19
+  ],
+  "episode_T": [
+    1339,
+    2464
+  ],
+  "epsilon": [
+    1.0,
+    0.982159,
+    0.957611
+  ],
+  "epsilon_T": [
+    72,
+    1339,
+    2464
+  ],
+  "test_attacking_same_enemy_pos_mean": [
+    429.1666666666667
+  ],
+  "test_attacking_same_enemy_pos_mean_T": [
+    72
+  ],
+  "test_battle_won_mean": [
+    0.0
+  ],
+  "test_battle_won_mean_T": [
+    72
+  ],
+  "test_custom_coop_metrics_summed_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 429.1225405019274
+    }
+  ],
+  "test_custom_coop_metrics_summed_mean_T": [
+    72
+  ],
+  "test_dead_allies_mean": [
+    4.0
+  ],
+  "test_dead_allies_mean_T": [
+    72
+  ],
+  "test_dead_enemies_mean": [
+    4.94
+  ],
+  "test_dead_enemies_mean_T": [
+    72
+  ],
+  "test_ep_length_mean": [
+    79.08
+  ],
+  "test_ep_length_mean_T": [
+    72
+  ],
+  "test_not_attacking_summed_neg_mean": [
+    -0.08333333333333333
+  ],
+  "test_not_attacking_summed_neg_mean_T": [
+    72
+  ],
+  "test_only_built_in_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 6.268863648280201
+    }
+  ],
+  "test_only_built_in_return_mean_T": [
+    72
+  ],
+  "test_only_built_in_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.9863221175911232
+    }
+  ],
+  "test_only_built_in_return_std_T": [
+    72
+  ],
+  "test_only_custom_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "test_only_custom_return_mean_T": [
+    72
+  ],
+  "test_only_custom_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "test_only_custom_return_std_T": [
+    72
+  ],
+  "test_running_to_enemy_pos_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.013619491855303445
+    }
+  ],
+  "test_running_to_enemy_pos_mean_T": [
+    72
+  ],
+  "test_summed_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 6.268863648280201
+    }
+  ],
+  "test_summed_return_mean_T": [
+    72
+  ],
+  "test_summed_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.9863221175911232
+    }
+  ],
+  "test_summed_return_std_T": [
+    72
+  ]
+}

@@ -1,0 +1,13 @@
+behaviours:
+  stayTogether:
+    reward: 1
+    enabled: false
+  teamUp:
+    reward: 1
+    enabled: true
+  notAttacking:
+    reward: -1
+    enabled: false
+  attackingSame:
+    reward: 1
+    enabled: false

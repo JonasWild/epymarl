@@ -1,0 +1,123 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "C:\\Users\\jonas\\Documents\\Github\\epymarl\\src",
+    "dependencies": [
+      "munch==2.5.0",
+      "numpy==1.23.1",
+      "sacred==0.8.2",
+      "torch==2.0.1"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl_0",
+    "repositories": [
+      {
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      },
+      {
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      },
+      {
+        "commit": "579486f9fa2eb628e162ef4acf51e1cb1c24f42d",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      }
+    ],
+    "sources": [
+      [
+        "main.py",
+        "_sources\\main_3d0e7cac914bdd1050682aaf8bae3d77.py"
+      ],
+      [
+        "run.py",
+        "_sources\\run_6df4177238aa94b24bef38e04727c0ac.py"
+      ],
+      [
+        "utils\\logging.py",
+        "_sources\\logging_19831644a2526c55c2bc12dd75dc94d8.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\smacv2\\smacv2\\env\\starcraft2\\starcraft2.py\", line 625, in step\n    self._controller.actions(req_actions)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\remote_controller.py\", line 81, in _skip_status\n    return func(self, *args, **kwargs)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\remote_controller.py\", line 92, in _valid_status\n    raise protocol.ProtocolError(\n",
+    "pysc2.lib.protocol.ProtocolError: `actions` called while in state: Status.ended, valid: (Status.in_game)\n",
+    "\nDuring handling of the above exception, another exception occurred:\n\n",
+    "Traceback (most recent call last):\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\sacred\\config\\captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\main.py\", line 146, in my_main\n    run(_run, config, _log)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\run.py\", line 60, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\run.py\", line 192, in run_sequential\n    episode_batch = runner.run(test_mode=False)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\runners\\episode_runner.py\", line 105, in run\n    reward, terminated, env_info = self.env.step(actions[0])\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\smacv2\\smacv2\\env\\starcraft2\\starcraft2.py\", line 638, in step\n    self.full_restart()\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\smacv2\\smacv2\\env\\starcraft2\\starcraft2.py\", line 584, in full_restart\n    self._launch()\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\smacv2\\smacv2\\env\\starcraft2\\starcraft2.py\", line 428, in _launch\n    self._sc2_proc = self._run_config.start(\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\run_configs\\platforms.py\", line 83, in start\n    return sc_process.StarcraftProcess(\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\sc_process.py\", line 137, in __init__\n    self._controller = remote_controller.RemoteController(\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\remote_controller.py\", line 142, in __init__\n    sock = self._connect(host, port, proc, timeout_seconds)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\stopwatch.py\", line 205, in _stopwatch\n    return func(*args, **kwargs)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\pysc2\\lib\\remote_controller.py\", line 176, in _connect\n    raise ConnectError(\"Failed to connect to the SC2 websocket. Is it up?\")\n",
+    "pysc2.lib.remote_controller.ConnectError: Failed to connect to the SC2 websocket. Is it up?\n"
+  ],
+  "heartbeat": "2023-08-25T08:55:33.862423",
+  "host": {
+    "ENV": {},
+    "cpu": "Unknown",
+    "gpus": {
+      "driver_version": "531.79",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 960",
+          "persistence_mode": false,
+          "total_memory": 2048
+        }
+      ]
+    },
+    "hostname": "DESKTOP-1HDPUO6",
+    "os": [
+      "Windows",
+      "Windows-10-10.0.22621-SP0"
+    ],
+    "python_version": "3.8.16"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2023-08-24T20:17:38.021028",
+  "status": "FAILED",
+  "stop_time": "2023-08-25T08:55:33.893422"
+}
