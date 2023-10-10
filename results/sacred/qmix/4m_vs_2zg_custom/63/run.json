@@ -1,0 +1,111 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "C:\\Users\\jonas\\Documents\\Github\\epymarl\\src",
+    "dependencies": [
+      "munch==2.5.0",
+      "numpy==1.23.1",
+      "sacred==0.8.2",
+      "torch==2.0.1"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl_0",
+    "repositories": [
+      {
+        "commit": "03eb2f52be7dcc658e974f77cc451c5d7f9d663d",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      },
+      {
+        "commit": "03eb2f52be7dcc658e974f77cc451c5d7f9d663d",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      },
+      {
+        "commit": "03eb2f52be7dcc658e974f77cc451c5d7f9d663d",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      }
+    ],
+    "sources": [
+      [
+        "main.py",
+        "_sources\\main_1b57c821af0c404b5ebd529f95b8c1f5.py"
+      ],
+      [
+        "run.py",
+        "_sources\\run_db3e756727c1578cebfd2f06fda44e00.py"
+      ],
+      [
+        "utils\\logging.py",
+        "_sources\\logging_19831644a2526c55c2bc12dd75dc94d8.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\sacred\\config\\captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\main.py\", line 146, in my_main\n    run(_run, config, _log)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\run.py\", line 60, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\run.py\", line 92, in run_sequential\n    runner = r_REGISTRY[args.runner](args=args, logger=logger)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\runners\\episode_runner.py\", line 76, in __init__\n    self.meta_learner = CustomRewardLearner(self.get_env_info()[\"state_shape\"], 32, 1)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\CustomStarCraftEnv\\learners\\custom_reward_learner.py\", line 21, in __init__\n    self.target_model.load_state_dict(self.state_dict())\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\torch\\nn\\modules\\module.py\", line 2041, in load_state_dict\n    raise RuntimeError('Error(s) in loading state_dict for {}:\\n\\t{}'.format(\n",
+    "RuntimeError: Error(s) in loading state_dict for CustomRewardLearner:\n\tUnexpected key(s) in state_dict: \"target_model.fc1.weight\", \"target_model.fc1.bias\", \"target_model.fc2.weight\", \"target_model.fc2.bias\". \n"
+  ],
+  "heartbeat": "2023-10-05T09:09:00.738729",
+  "host": {
+    "ENV": {},
+    "cpu": "Unknown",
+    "gpus": {
+      "driver_version": "531.79",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 960",
+          "persistence_mode": false,
+          "total_memory": 2048
+        }
+      ]
+    },
+    "hostname": "DESKTOP-1HDPUO6",
+    "os": [
+      "Windows",
+      "Windows-10-10.0.22621-SP0"
+    ],
+    "python_version": "3.8.16"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2023-10-05T09:09:00.713773",
+  "status": "FAILED",
+  "stop_time": "2023-10-05T09:09:00.744728"
+}

@@ -48,9 +48,8 @@ class StayTogether(SequentialBehaviour):
             distances_features = {k: v for k, v in distances_feature_list}
 
             for index, (feature_index, feature) in enumerate(distances_features.items()):
-
                 index_agent_2 = len(env.agents) - len(distances_features) + index
-                agent_2 = env.agents[index]
+                agent_2 = env.agents[index_agent_2]
                 if agent_1.health == 0 or agent_2.health == 0:
                     continue
 

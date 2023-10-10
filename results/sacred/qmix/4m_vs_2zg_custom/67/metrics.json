@@ -1,0 +1,423 @@
+{
+  "AttackingSame_count": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.555526"
+    ],
+    "values": [
+      3.85
+    ]
+  },
+  "AttackingSame_reward": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.556533"
+    ],
+    "values": [
+      110.5
+    ]
+  },
+  "NotAttacking_count": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.555526"
+    ],
+    "values": [
+      0.05
+    ]
+  },
+  "NotAttacking_reward": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.556533"
+    ],
+    "values": [
+      -0.5
+    ]
+  },
+  "SplitInGroups_correct_grouping": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.555526"
+    ],
+    "values": [
+      0.05
+    ]
+  },
+  "SplitInGroups_count": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.555526"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "SplitInGroups_exactly_one_ally_close": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.554530"
+    ],
+    "values": [
+      7.75
+    ]
+  },
+  "SplitInGroups_moving_towards_enemies": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.554530"
+    ],
+    "values": [
+      0.3
+    ]
+  },
+  "SplitInGroups_reward": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.556533"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "StayTogether_count": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.555526"
+    ],
+    "values": [
+      3.9
+    ]
+  },
+  "StayTogether_reward": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.555526"
+    ],
+    "values": [
+      39.0
+    ]
+  },
+  "StayTogether_total_group_distance": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.554530"
+    ],
+    "values": [
+      19915.823110819794
+    ]
+  },
+  "StayTogether_total_group_distance_delta": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.554530"
+    ],
+    "values": [
+      -143.19603162873537
+    ]
+  },
+  "TeamUp_count": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.555526"
+    ],
+    "values": [
+      2.2
+    ]
+  },
+  "TeamUp_reward": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.556533"
+    ],
+    "values": [
+      22.0
+    ]
+  },
+  "custom_coop_summed_mean": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.556533"
+    ],
+    "values": [
+      26615.636105588077
+    ]
+  },
+  "episode": {
+    "steps": [
+      10004
+    ],
+    "timestamps": [
+      "2023-10-05T09:27:41.746697"
+    ],
+    "values": [
+      229
+    ]
+  },
+  "epsilon": {
+    "steps": [
+      44,
+      10081
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:29.429553",
+      "2023-10-05T09:27:42.438648"
+    ],
+    "values": [
+      1.0,
+      0.809221
+    ]
+  },
+  "grad_norm": {
+    "steps": [
+      1412
+    ],
+    "timestamps": [
+      "2023-10-05T09:26:18.876377"
+    ],
+    "values": [
+      3.293099880218506
+    ]
+  },
+  "loss": {
+    "steps": [
+      1412
+    ],
+    "timestamps": [
+      "2023-10-05T09:26:18.876377"
+    ],
+    "values": [
+      2.781768321990967
+    ]
+  },
+  "meta_learner_loss_mean": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.553467"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "metric_DistanceToEnemiesPerEpisode": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.553467"
+    ],
+    "values": [
+      1.6515627973106675
+    ]
+  },
+  "metric_StepsTillAllAttacked": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.554530"
+    ],
+    "values": [
+      19.095238095238095
+    ]
+  },
+  "metric_StepsTillFirstAttacked": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.553467"
+    ],
+    "values": [
+      17.095238095238095
+    ]
+  },
+  "q_taken_mean": {
+    "steps": [
+      1412
+    ],
+    "timestamps": [
+      "2023-10-05T09:26:18.877378"
+    ],
+    "values": [
+      0.026690248051716315
+    ]
+  },
+  "target_max_qvals_mean": {
+    "steps": [
+      1412
+    ],
+    "timestamps": [
+      "2023-10-05T09:26:18.877378"
+    ],
+    "values": [
+      0.07071636621404978
+    ]
+  },
+  "target_mean": {
+    "steps": [
+      1412
+    ],
+    "timestamps": [
+      "2023-10-05T09:26:18.877378"
+    ],
+    "values": [
+      0.15288785766947371
+    ]
+  },
+  "td_error_abs": {
+    "steps": [
+      1412
+    ],
+    "timestamps": [
+      "2023-10-05T09:26:18.877378"
+    ],
+    "values": [
+      0.5267648669883145
+    ]
+  },
+  "test_battle_won_mean": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.550297"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_dead_allies_mean": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.553467"
+    ],
+    "values": [
+      4.0
+    ]
+  },
+  "test_dead_enemies_mean": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.553467"
+    ],
+    "values": [
+      2.0
+    ]
+  },
+  "test_ep_length_mean": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.553467"
+    ],
+    "values": [
+      48.75
+    ]
+  },
+  "test_only_built_in_return_mean": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.549298"
+    ],
+    "values": [
+      4.837335526315789
+    ]
+  },
+  "test_only_built_in_return_std": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.549298"
+    ],
+    "values": [
+      0.14106279394620239
+    ]
+  },
+  "test_only_custom_return_mean": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.549298"
+    ],
+    "values": [
+      3.080443717353046
+    ]
+  },
+  "test_only_custom_return_std": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.549298"
+    ],
+    "values": [
+      0.3540209897982053
+    ]
+  },
+  "test_summed_return_mean": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.548297"
+    ],
+    "values": [
+      7.917779243668835
+    ]
+  },
+  "test_summed_return_std": {
+    "steps": [
+      44
+    ],
+    "timestamps": [
+      "2023-10-05T09:23:37.548297"
+    ],
+    "values": [
+      0.3994274154240993
+    ]
+  }
+}

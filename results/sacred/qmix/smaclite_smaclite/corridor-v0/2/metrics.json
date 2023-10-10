@@ -1,0 +1,167 @@
+{
+  "custom_coop_summed_mean": {
+    "steps": [
+      29
+    ],
+    "timestamps": [
+      "2023-09-27T08:37:46.287103"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "epsilon": {
+    "steps": [
+      29
+    ],
+    "timestamps": [
+      "2023-09-27T08:37:20.045263"
+    ],
+    "values": [
+      1.0
+    ]
+  },
+  "grad_norm": {
+    "steps": [
+      1010
+    ],
+    "timestamps": [
+      "2023-09-27T08:38:32.791188"
+    ],
+    "values": [
+      2.4188082218170166
+    ]
+  },
+  "loss": {
+    "steps": [
+      1010
+    ],
+    "timestamps": [
+      "2023-09-27T08:38:32.791188"
+    ],
+    "values": [
+      1.2331215143203735
+    ]
+  },
+  "q_taken_mean": {
+    "steps": [
+      1010
+    ],
+    "timestamps": [
+      "2023-09-27T08:38:32.791188"
+    ],
+    "values": [
+      0.015820345233375877
+    ]
+  },
+  "target_max_qvals_mean": {
+    "steps": [
+      1010
+    ],
+    "timestamps": [
+      "2023-09-27T08:38:32.791188"
+    ],
+    "values": [
+      0.043671867949734426
+    ]
+  },
+  "target_mean": {
+    "steps": [
+      1010
+    ],
+    "timestamps": [
+      "2023-09-27T08:38:32.791188"
+    ],
+    "values": [
+      0.06186626673531611
+    ]
+  },
+  "td_error_abs": {
+    "steps": [
+      1010
+    ],
+    "timestamps": [
+      "2023-09-27T08:38:32.791188"
+    ],
+    "values": [
+      0.7901058990176362
+    ]
+  },
+  "test_ep_length_mean": {
+    "steps": [
+      29
+    ],
+    "timestamps": [
+      "2023-09-27T08:37:46.284094"
+    ],
+    "values": [
+      47.0
+    ]
+  },
+  "test_only_built_in_return_mean": {
+    "steps": [
+      29
+    ],
+    "timestamps": [
+      "2023-09-27T08:37:46.284094"
+    ],
+    "values": [
+      1.42191015625
+    ]
+  },
+  "test_only_built_in_return_std": {
+    "steps": [
+      29
+    ],
+    "timestamps": [
+      "2023-09-27T08:37:46.284094"
+    ],
+    "values": [
+      0.00039968020052950096
+    ]
+  },
+  "test_only_custom_return_mean": {
+    "steps": [
+      29
+    ],
+    "timestamps": [
+      "2023-09-27T08:37:46.284094"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_only_custom_return_std": {
+    "steps": [
+      29
+    ],
+    "timestamps": [
+      "2023-09-27T08:37:46.284094"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_summed_return_mean": {
+    "steps": [
+      29
+    ],
+    "timestamps": [
+      "2023-09-27T08:37:46.283093"
+    ],
+    "values": [
+      1.42191015625
+    ]
+  },
+  "test_summed_return_std": {
+    "steps": [
+      29
+    ],
+    "timestamps": [
+      "2023-09-27T08:37:46.283093"
+    ],
+    "values": [
+      0.00039968020052950096
+    ]
+  }
+}

@@ -7,9 +7,13 @@ import CustomStarCraftEnv.CustomStarCraftEnv
 from CustomStarCraftEnv.Behaviours.BehaviourRegistry import BehaviourRegistry
 from CustomStarCraftEnv.Behaviours.StayTogether import StayTogether
 from CustomStarCraftEnv.Behaviours.TeamUp import TeamUp
+from CustomStarCraftEnv.Metrics.MetricRegistry import MetricRegistry
+from CustomStarCraftEnv.components.meta_replay_buffer import MetaReplayBuffer
+from CustomStarCraftEnv.learners.custom_reward_learner import CustomRewardLearner
 
 from myutils.HeatSC2map import MyHeatmap
 from myutils.myutils import pad_second_dim
+from src.components.episode_buffer import ReplayBuffer
 
 
 class ReturnMetric:
@@ -22,14 +26,14 @@ class EpisodeRunner:
     heatmap_size = 100
 
     def init_behaviour_classes(self):
-        StayTogether.min_delta = self.args.env_args["behaviour_stayTogether_min_delta"]
-        StayTogether.enemy_in_distance = self.args.env_args["enemy_in_distance"]
-        TeamUp.min_delta = self.args.env_args["behaviour_teamUp_min_delta"]
-        TeamUp.enemy_in_distance = self.args.env_args["enemy_in_distance"]
+        StayTogether.min_delta = self.args.env_args.get("behaviour_stayTogether_min_delta")
+        StayTogether.enemy_in_distance = self.args.env_args.get("enemy_in_distance")
+        TeamUp.min_delta = self.args.env_args.get("behaviour_teamUp_min_delta")
+        TeamUp.enemy_in_distance = self.args.env_args.get("enemy_in_distance")
 
-        del self.args.env_args["behaviour_stayTogether_min_delta"]
-        del self.args.env_args["behaviour_teamUp_min_delta"]
-        del self.args.env_args["enemy_in_distance"]
+        self.args.env_args.pop("behaviour_stayTogether_min_delta", None)
+        self.args.env_args.pop("behaviour_teamUp_min_delta", None)
+        self.args.env_args.pop("enemy_in_distance", None)
 
     def __init__(self, args, logger):
         self.args = args
@@ -40,7 +44,15 @@ class EpisodeRunner:
         self.init_behaviour_classes()
 
         self.env = env_REGISTRY[self.args.env](**self.args.env_args)
-        self.behaviour_registry = BehaviourRegistry(self.args.env_args["custom_env_args"], self.env.n_agents)
+
+        self.behaviour_registry = BehaviourRegistry(
+            self.args.env_args.get("custom_env_args"),
+            self.env.n_agents
+        )
+        self.metric_registry = MetricRegistry(
+            self.args.env_args.get("custom_env_args"),
+            self.env.n_agents
+        )
 
         self.episode_limit = self.env.episode_limit
         self.t = 0
@@ -60,19 +72,37 @@ class EpisodeRunner:
         self.log_train_stats_t = -1000000
         self.log_heatmaps_t = 0
 
+        self.train_meta_target_net_t = 0
+        self.train_meta_target_net_interval = 1000
+
         self.t_env_test = 0
 
         self.obs_per_episode = []
         self.actions_per_episode = []
+        self.meta_learner_loss_per_episode = []
 
-        self.n_obs = self.get_env_info()["obs_shape"]
-        self.n_actions = self.get_env_info()["n_actions"]
+        self.n_obs = self.env.get_obs_size()
+        self.n_actions = self.env.get_total_actions()
+
+        self.meta_learner = CustomRewardLearner(self.env.get_state_size(), 32, 1)
 
 
     def setup(self, scheme, groups, preprocess, mac):
         self.new_batch = partial(EpisodeBatch, scheme, groups, self.batch_size, self.episode_limit + 1,
                                  preprocess=preprocess, device=self.args.device)
         self.mac = mac
+
+        self.new_meta_batch = partial(MetaReplayBuffer, scheme, groups, self.batch_size, self.episode_limit + 1,
+                                 preprocess=None, device=self.args.device)
+
+        self.meta_buffer = MetaReplayBuffer(
+            scheme,
+            groups,
+            64,
+            self.episode_limit + 1,
+            preprocess=preprocess,
+            device="cpu",
+        )
 
     def get_env_info(self):
         return self.env.get_env_info()
@@ -85,11 +115,13 @@ class EpisodeRunner:
 
     def reset(self):
         self.batch = self.new_batch()
+        self.meta_batch = self.new_meta_batch()
         self.env.reset()
         self.t = 0
 
         if self.t_env == 0:
             self.behaviour_registry.initialize()
+            self.metric_registry.initialize()
 
     def run(self, test_mode=False):
         self.reset()
@@ -109,13 +141,17 @@ class EpisodeRunner:
         while not terminated:
 
             obs = self.env.get_obs()
+
             pre_transition_data = {
                 "state": [self.env.get_state()],
                 "avail_actions": [self.env.get_avail_actions()],
                 "obs": [obs]
             }
 
+            obs_for_meta_learner = np.array(self.env.get_state()).astype(np.float32)
+
             self.batch.update(pre_transition_data, ts=self.t)
+            self.meta_batch.update(pre_transition_data, ts=self.t)
 
             # Pass the entire batch of experiences up till now to the agents
             # Receive the actions for each agent at this timestep in a batch of size 1
@@ -126,17 +162,23 @@ class EpisodeRunner:
             actions_sample = [[1 if action == i else 0 for i in range(self.n_actions)] for action in actions[0]]
             actions_episode.append(actions_sample)
 
+            custom_reward_from_behaviour = self.behaviour_registry.evaluate_behaviors(self.env, actions, obs)
+
             reward, terminated, env_info = self.env.step(actions[0])
 
-            custom_reward = self.behaviour_registry.evaluate_behaviors(self.env, actions, obs)
+            # Predict the custom reward from the meta learner
+            predicted_custom_reward = self.meta_learner.predict_reward(obs_for_meta_learner)
+            predicted_custom_reward = predicted_custom_reward.item()
+
+            self.metric_registry.add_metrics_data(self.env, actions, obs)
 
             if test_mode and self.args.render:
                 self.env.render()
 
             episode_only_built_in_return += reward
-            episode_only_custom_return += custom_reward
+            episode_only_custom_return += predicted_custom_reward
 
-            reward += custom_reward
+            reward += predicted_custom_reward
             episode_total_return += reward
 
             post_transition_data = {
@@ -145,7 +187,14 @@ class EpisodeRunner:
                 "terminated": [(terminated != env_info.get("episode_limit", False),)],
             }
 
+            meta_post_transition_data = {
+                "actions": actions,
+                "reward": [(custom_reward_from_behaviour,)],
+                "terminated": [(terminated != env_info.get("episode_limit", False),)],
+            }
+
             self.batch.update(post_transition_data, ts=self.t)
+            self.meta_batch.update(meta_post_transition_data, ts=self.t)
 
             self.t += 1
 
@@ -154,6 +203,8 @@ class EpisodeRunner:
             "avail_actions": [self.env.get_avail_actions()],
             "obs": [self.env.get_obs()]
         }
+
+        self.metric_registry.evaluate_episode()
 
         self.obs_per_episode.append(obs_episode)
         self.actions_per_episode.append(actions_episode)
@@ -190,6 +241,22 @@ class EpisodeRunner:
             ReturnMetric("only_built_in_", cur_only_built_in_returns),
         ]
 
+        self.meta_buffer.insert_episode_batch(self.meta_batch)
+
+        if self.meta_buffer.can_sample(self.batch_size):
+            episode_sample = self.meta_buffer.sample(self.batch_size)
+
+            # Truncate batch to only filled timesteps
+            max_ep_t = episode_sample.max_t_filled()
+            episode_sample = episode_sample[:, :max_ep_t]
+
+            meta_learner_loss = self.meta_learner.train_model(episode_sample)
+            self.meta_learner_loss_per_episode.append(meta_learner_loss)
+
+        if self.t_env - self.train_meta_target_net_t >= self.train_meta_target_net_interval:
+            self.meta_learner.update_target_network()
+            self.train_meta_target_net_t = self.t_env
+
         if test_mode and (len(self.test_total_returns) == self.args.test_nepisode):
             self._log(return_metrics, cur_stats, log_prefix, stats_episode, custom_scalars)
         elif self.t_env - self.log_train_stats_t >= self.args.runner_log_interval:
@@ -201,7 +268,8 @@ class EpisodeRunner:
             heatmaps = self.behaviour_registry.get_heatmaps()
 
             padded_obs = pad_second_dim(self.obs_per_episode, [[0.0] * self.n_obs] * len(self.obs_per_episode[0][0]))
-            padded_actions = pad_second_dim(self.actions_per_episode, [[0] * self.n_actions] * len(self.actions_per_episode[0][0]))
+            padded_actions = pad_second_dim(self.actions_per_episode,
+                                            [[0] * self.n_actions] * len(self.actions_per_episode[0][0]))
 
             obs_np = np.array(padded_obs)
             actions_np = np.array(padded_actions)
@@ -244,12 +312,18 @@ class EpisodeRunner:
             if k != "n_episodes":
                 self.logger.log_stat(prefix + k + "_mean", v / stats["n_episodes"], self.t_env)
 
+        self.logger.log_stat("meta_learner_loss_mean", sum(self.meta_learner_loss_per_episode) / max(len(self.meta_learner_loss_per_episode), 1), self.t_env)
+        self.meta_learner_loss_per_episode.clear()
+
+        for k, v in self.metric_registry.get_metric_results().items():
+            self.logger.log_stat("metric_" + k, v, self.t_env)
+
         mean_sum = 0
         for k, v in self.behaviour_registry.get_behaviour_stats().items():
             mean_sum += v
             self.logger.log_stat(k, v / stats["n_episodes"], self.t_env)
 
-        behaviour_count = len(self.behaviour_registry.get_behaviour_stats())
+        behaviour_count = max(len(self.behaviour_registry.get_behaviour_stats()), 1)
         self.logger.log_stat("custom_coop_summed_mean", mean_sum / behaviour_count, self.t_env)
 
         self.behaviour_registry.reset_stats()

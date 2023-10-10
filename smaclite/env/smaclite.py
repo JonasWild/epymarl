@@ -16,6 +16,7 @@ from smaclite.env.units.unit_type import CombatType, UnitType
 from smaclite.env.util import point_inside_circle
 from smaclite.env.util.direction import Direction
 from smaclite.env.util.faction import Faction
+from smaclite.env.rendering.renderer import Renderer
 
 GROUP_BUFFER = 0.05
 AGENT_SIGHT_RANGE = 9
@@ -138,7 +139,7 @@ class SMACliteEnv(gym.Env):
             for _ in range(self.n_agents))
         self.cx_cy = np.array([map_info.width / 2, map_info.height / 2])
 
-    def reset(self, seed=None, return_info=False, options=None) \
+    def reset(self, seed=None, return_info=True, options=None) \
             -> Tuple[np.ndarray, dict]:
         self.agents = {}
         self.enemies = {}
@@ -180,12 +181,11 @@ class SMACliteEnv(gym.Env):
             reward += 200
         done = all_enemies_dead or len(self.agents) == 0
         reward /= self.max_reward / 20  # Scale reward between 0 and 20
-        return self.__get_obs(), reward, done, self.__get_info()
+        return self.__get_obs(), reward, done, False, self.__get_info()
 
     def render(self, mode='human'):
         if mode == 'human':
             if self.renderer is None:
-                from smaclite.env.smaclite import Renderer
                 self.renderer = Renderer()
             self.renderer.render(self.map_info, self.all_units.values())
 

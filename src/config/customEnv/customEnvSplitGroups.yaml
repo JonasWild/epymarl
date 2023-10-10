@@ -1,0 +1,24 @@
+behaviours:
+  stayTogether:
+    reward: 10
+    enabled: false
+  teamUp:
+    reward: 10
+    enabled: false
+  notAttacking:
+    reward: -10
+    enabled: false
+  attackingSame:
+    reward: 10
+    enabled: false
+  splitInGroups:
+    reward: 10
+    enabled: true
+
+metrics:
+  distanceToEnemies:
+      enabled: true
+  stepsTillFirstAttacked:
+    enabled: true
+  stepsTillAllAttacked:
+    enabled: true

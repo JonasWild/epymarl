@@ -1,0 +1,280 @@
+{
+  "AttackingSame_count": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.435332"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "AttackingSame_reward": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.435332"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "NotAttacking_count": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.434328"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "NotAttacking_reward": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.435332"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "SplitInGroups_count": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.435332"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "SplitInGroups_reward": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.436331"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "StayTogether_count": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.434328"
+    ],
+    "values": [
+      3.99
+    ]
+  },
+  "StayTogether_reward": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.435332"
+    ],
+    "values": [
+      39.9
+    ]
+  },
+  "StayTogether_total_group_distance": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.434328"
+    ],
+    "values": [
+      581954.524317114
+    ]
+  },
+  "StayTogether_total_group_distance_delta": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.434328"
+    ],
+    "values": [
+      -4118.091640143245
+    ]
+  },
+  "TeamUp_count": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.434328"
+    ],
+    "values": [
+      0.03
+    ]
+  },
+  "TeamUp_reward": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.435332"
+    ],
+    "values": [
+      0.3
+    ]
+  },
+  "custom_coop_summed_mean": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.436331"
+    ],
+    "values": [
+      4815672.105641423
+    ]
+  },
+  "episode": {
+    "steps": [
+      1071
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:13.892734"
+    ],
+    "values": [
+      9
+    ]
+  },
+  "epsilon": {
+    "steps": [
+      111,
+      1191
+    ],
+    "timestamps": [
+      "2023-09-09T14:04:06.479749",
+      "2023-09-09T14:08:14.773811"
+    ],
+    "values": [
+      1.0,
+      0.979651
+    ]
+  },
+  "test_battle_won_mean": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.429595"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_dead_allies_mean": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.433667"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_dead_enemies_mean": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.433667"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_ep_length_mean": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.433667"
+    ],
+    "values": [
+      120.0
+    ]
+  },
+  "test_only_built_in_return_mean": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.429595"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_only_built_in_return_std": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.429595"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_only_custom_return_mean": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.428596"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_only_custom_return_std": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.429595"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_summed_return_mean": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.428596"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_summed_return_std": {
+    "steps": [
+      111
+    ],
+    "timestamps": [
+      "2023-09-09T14:08:05.428596"
+    ],
+    "values": [
+      0.0
+    ]
+  }
+}

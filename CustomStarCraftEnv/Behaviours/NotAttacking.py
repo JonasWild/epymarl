@@ -19,6 +19,9 @@ class NotAttacking(SequentialBehaviour):
         previous_ally_units = env.previous_ally_units
         death_tracker_ally = env.death_tracker_ally
 
+        if previous_ally_units is None:
+            return 0
+
         delta_allies = [0] * len(env.agents.items())
         for index, (al_id, al_unit) in enumerate(env.agents.items()):
             prev_health = previous_ally_units[al_id].health + previous_ally_units[al_id].shield

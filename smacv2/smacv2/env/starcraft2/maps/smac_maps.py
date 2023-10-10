@@ -44,6 +44,17 @@ map_param_registry = {
         "map_type": "protoss_gen",
         "map_name": "32x32_flat",
     },
+    "4m_vs_2zg_custom": {
+        "n_agents": 4,
+        "n_enemies": 4,
+        "limit": 120,
+        "a_race": "T",
+        "b_race": "Z",
+        "unit_type_bits": 0,
+        "map_type": "marines",
+        "map_name": "4m_vs_2zg_custom",
+        "bg_img": "bg_line.png"
+    },
     "3m": {
         "n_agents": 3,
         "n_enemies": 3,
@@ -53,6 +64,7 @@ map_param_registry = {
         "unit_type_bits": 0,
         "map_type": "marines",
         "map_name": "3m",
+        "bg_img": "bg_line.png"
     },
     "8m": {
         "n_agents": 8,
@@ -63,6 +75,7 @@ map_param_registry = {
         "unit_type_bits": 0,
         "map_type": "marines",
         "map_name": "8m",
+        "bg_img": "bg_line.png"
     },
     "25m": {
         "n_agents": 25,
@@ -223,6 +236,7 @@ map_param_registry = {
         "unit_type_bits": 0,
         "map_type": "zealots",
         "map_name": "corridor",
+        "bg_img": "bg_corridor.png"
     },
     "corridor_spawn_behind": {
         "n_agents": 6,
@@ -233,6 +247,7 @@ map_param_registry = {
         "unit_type_bits": 0,
         "map_type": "zealots",
         "map_name": "corridor_spawn_behind",
+        "bg_img": "bg_corridor.png"
     },
     "corridor_spawn_behind_6zealot_vs_12zerg": {
         "n_agents": 6,
@@ -243,6 +258,7 @@ map_param_registry = {
         "unit_type_bits": 0,
         "map_type": "zealots",
         "map_name": "corridor_spawn_behind_6zealot_vs_12zerg",
+        "bg_img": "bg_corridor.png"
     },
     "smaller_corridor_spawn_behind_2zealot_vs_8zerg": {
         "n_agents": 2,
@@ -253,6 +269,7 @@ map_param_registry = {
         "unit_type_bits": 0,
         "map_type": "zealots",
         "map_name": "smaller_corridor_spawn_behind_2zealot_vs_8zerg",
+        "bg_img": "bg_corridor.png"
     },
     "tank_test": {
         "n_agents": 4,
@@ -263,6 +280,7 @@ map_param_registry = {
         "unit_type_bits": 0,
         "map_type": "zealots",
         "map_name": "tank_test",
+        "bg_img": "bg_corridor.png"
     },
     "6h_vs_8z": {
         "n_agents": 6,

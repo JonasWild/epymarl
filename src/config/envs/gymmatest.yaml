@@ -1,15 +1,20 @@
 env: "gymma"
 
 env_args:
-  key: "smaclite:smaclite/MMM2-v0"
+  key: "smaclite:smaclite/2s3z-v0"
   use_cpp_rvo2: false
-  time_limit: 100
+  render: false
+  time_limit: 30
   pretrained_wrapper: null
+  enemy_in_distance: 20
+  behaviour_stayTogether_min_delta: 0.28  # minimum reduced distance between a group of allys to trigger reward
+  behaviour_teamUp_min_delta: 0.12   # minimum reduced distance to a specific ally to trigger reward
 
 test_greedy: True
-test_nepisode: 100
+test_nepisode: 20
 test_interval: 50000
-log_interval: 50000
-runner_log_interval: 10000
-learner_log_interval: 10000
+log_interval: 5000
+runner_log_interval: 1000
+learner_log_interval: 1000
 t_max: 2050000
+render: false

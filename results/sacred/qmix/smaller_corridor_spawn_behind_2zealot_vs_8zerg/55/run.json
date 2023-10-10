@@ -43,7 +43,7 @@
       ]
     ]
   },
-  "heartbeat": "2023-08-31T10:27:40.415443",
+  "heartbeat": "2023-08-31T10:35:33.098353",
   "host": {
     "ENV": {},
     "cpu": "Unknown",
@@ -95,5 +95,6 @@
   "resources": [],
   "result": null,
   "start_time": "2023-08-31T10:27:10.375869",
-  "status": "RUNNING"
+  "status": "INTERRUPTED",
+  "stop_time": "2023-08-31T10:35:33.114353"
 }

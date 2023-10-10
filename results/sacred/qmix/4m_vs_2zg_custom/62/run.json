@@ -1,0 +1,120 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "C:\\Users\\jonas\\Documents\\Github\\epymarl\\src",
+    "dependencies": [
+      "munch==2.5.0",
+      "numpy==1.23.1",
+      "sacred==0.8.2",
+      "torch==2.0.1"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl_0",
+    "repositories": [
+      {
+        "commit": "03eb2f52be7dcc658e974f77cc451c5d7f9d663d",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      },
+      {
+        "commit": "03eb2f52be7dcc658e974f77cc451c5d7f9d663d",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      },
+      {
+        "commit": "03eb2f52be7dcc658e974f77cc451c5d7f9d663d",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      }
+    ],
+    "sources": [
+      [
+        "main.py",
+        "_sources\\main_1b57c821af0c404b5ebd529f95b8c1f5.py"
+      ],
+      [
+        "run.py",
+        "_sources\\run_db3e756727c1578cebfd2f06fda44e00.py"
+      ],
+      [
+        "utils\\logging.py",
+        "_sources\\logging_19831644a2526c55c2bc12dd75dc94d8.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\sacred\\config\\captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\main.py\", line 146, in my_main\n    run(_run, config, _log)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\run.py\", line 60, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\run.py\", line 92, in run_sequential\n    runner = r_REGISTRY[args.runner](args=args, logger=logger)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\runners\\episode_runner.py\", line 76, in __init__\n    self.meta_learner = CustomRewardLearner(self.get_env_info()[\"state_shape\"], 32, 1)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\CustomStarCraftEnv\\learners\\custom_reward_learner.py\", line 19, in __init__\n    self.target_model = self.__class__(input_dim, hidden_dim, output_dim) # replicate the structure of the policy\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\CustomStarCraftEnv\\learners\\custom_reward_learner.py\", line 19, in __init__\n    self.target_model = self.__class__(input_dim, hidden_dim, output_dim) # replicate the structure of the policy\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\CustomStarCraftEnv\\learners\\custom_reward_learner.py\", line 19, in __init__\n    self.target_model = self.__class__(input_dim, hidden_dim, output_dim) # replicate the structure of the policy\n",
+    "  [Previous line repeated 482 more times]\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\CustomStarCraftEnv\\learners\\custom_reward_learner.py\", line 11, in __init__\n    self.fc1 = nn.Linear(input_dim, hidden_dim)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\torch\\nn\\modules\\linear.py\", line 101, in __init__\n    self.reset_parameters()\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\torch\\nn\\modules\\linear.py\", line 111, in reset_parameters\n    init.uniform_(self.bias, -bound, bound)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\torch\\nn\\init.py\", line 137, in uniform_\n    return _no_grad_uniform_(tensor, a, b)\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\torch\\nn\\init.py\", line 13, in _no_grad_uniform_\n    with torch.no_grad():\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\torch\\autograd\\grad_mode.py\", line 49, in __init__\n    if not torch._jit_internal.is_scripting():\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\torch\\_jit_internal.py\", line 1102, in is_scripting\n    def is_scripting() -> bool:\n",
+    "RecursionError: maximum recursion depth exceeded while calling a Python object\n"
+  ],
+  "heartbeat": "2023-10-05T09:07:14.700491",
+  "host": {
+    "ENV": {},
+    "cpu": "Unknown",
+    "gpus": {
+      "driver_version": "531.79",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 960",
+          "persistence_mode": false,
+          "total_memory": 2048
+        }
+      ]
+    },
+    "hostname": "DESKTOP-1HDPUO6",
+    "os": [
+      "Windows",
+      "Windows-10-10.0.22621-SP0"
+    ],
+    "python_version": "3.8.16"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2023-10-05T09:07:14.571877",
+  "status": "FAILED",
+  "stop_time": "2023-10-05T09:07:14.707583"
+}

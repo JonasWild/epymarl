@@ -1,4 +1,5 @@
 from CustomStarCraftEnv.Behaviours import Behaviour, StayTogether, TeamUp, NotAttacking, AttackingSame
+from CustomStarCraftEnv.Behaviours.SplitInGroups import SplitInGroups
 from myutils.HeatSC2map import HeatSC2map
 
 
@@ -22,18 +23,23 @@ class BehaviourRegistry:
             'stayTogether': StayTogether.StayTogether,
             'teamUp': TeamUp.TeamUp,
             'notAttacking': NotAttacking.NotAttacking,
-            'attackingSame': AttackingSame.AttackingSame
+            'attackingSame': AttackingSame.AttackingSame,
+            'splitInGroups': SplitInGroups
         }
 
     def initialize(self):
-        # Register all behaviors based on the config
-        for behaviour_name, behaviour_config in self.config['behaviours'].items():
-            behaviour_class = self.behaviour_mapping.get(behaviour_name)
-            if behaviour_class:
-                behaviour = behaviour_class(behaviour_config, self.n_agents)
-                self.behaviours.append(behaviour)
-                self.reward_counts[_get_count_string(behaviour)] = 0
-                self.rewards[_get_rewards_string(behaviour)] = 0
+        # Check if self.config is not None and that 'behaviours' exists and is a dictionary
+        if self.config and 'behaviours' in self.config and isinstance(self.config['behaviours'], dict):
+            # Register all behaviors based on the config
+            for behaviour_name, behaviour_config in self.config['behaviours'].items():
+                behaviour_class = self.behaviour_mapping.get(behaviour_name)
+                if behaviour_class:
+                    behaviour = behaviour_class(behaviour_config, self.n_agents)
+                    self.behaviours.append(behaviour)
+                    self.reward_counts[_get_count_string(behaviour)] = 0
+                    self.rewards[_get_rewards_string(behaviour)] = 0
+        else:
+            print("Config is None, or behaviours not found or not a dictionary")
 
     def reset_heatmaps(self):
         for behaviour in self.behaviours:

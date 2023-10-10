@@ -38,7 +38,7 @@ class MultiAgentEnv(object):
 
     def get_cap_size(self):
         """Returns the size of the own capabilities of the agent."""
-        raise NotImplementedError
+        pass
 
     def get_avail_actions(self):
         """Returns the available actions of all agents in a list."""
