@@ -1,0 +1,122 @@
+{
+  "advantage_mean": [
+    -0.005288794404175244
+  ],
+  "advantage_mean_T": [
+    833
+  ],
+  "agent_grad_norm": [
+    0.0070130187086761
+  ],
+  "agent_grad_norm_T": [
+    833
+  ],
+  "critic_grad_norm": [
+    0.128187894821167
+  ],
+  "critic_grad_norm_T": [
+    833
+  ],
+  "critic_loss": [
+    0.010716323740780354
+  ],
+  "critic_loss_T": [
+    833
+  ],
+  "ep_length_mean": [
+    83.3
+  ],
+  "ep_length_mean_T": [
+    833
+  ],
+  "only_built_in_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.4948917748917749
+    }
+  ],
+  "only_built_in_return_mean_T": [
+    833
+  ],
+  "only_built_in_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.36010009040687024
+    }
+  ],
+  "only_built_in_return_std_T": [
+    833
+  ],
+  "only_custom_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "only_custom_return_mean_T": [
+    833
+  ],
+  "only_custom_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "only_custom_return_std_T": [
+    833
+  ],
+  "pg_loss": [
+    -0.012927514500916004
+  ],
+  "pg_loss_T": [
+    833
+  ],
+  "pi_max": [
+    0.20820932743214474
+  ],
+  "pi_max_T": [
+    833
+  ],
+  "q_taken_mean": [
+    0.3520798700339511
+  ],
+  "q_taken_mean_T": [
+    833
+  ],
+  "summed_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.4948917748917749
+    }
+  ],
+  "summed_return_mean_T": [
+    833
+  ],
+  "summed_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.36010009040687024
+    }
+  ],
+  "summed_return_std_T": [
+    833
+  ],
+  "target_mean": [
+    0.34679106017406963
+  ],
+  "target_mean_T": [
+    833
+  ],
+  "td_error_abs": [
+    0.06422694505048113
+  ],
+  "td_error_abs_T": [
+    833
+  ]
+}

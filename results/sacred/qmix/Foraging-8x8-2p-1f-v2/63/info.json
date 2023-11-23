@@ -1,0 +1,136 @@
+{
+  "custom_coop_summed_mean": [
+    0.0
+  ],
+  "custom_coop_summed_mean_T": [
+    50
+  ],
+  "epsilon": [
+    1.0,
+    0.8094680000000001
+  ],
+  "epsilon_T": [
+    50,
+    10078
+  ],
+  "grad_norm": [
+    2160.762939453125,
+    30.006532669067383
+  ],
+  "grad_norm_T": [
+    1195,
+    11204
+  ],
+  "loss": [
+    122.73307800292969,
+    14.15893268585205
+  ],
+  "loss_T": [
+    1195,
+    11204
+  ],
+  "meta_learner_loss_mean": [
+    0.0
+  ],
+  "meta_learner_loss_mean_T": [
+    50
+  ],
+  "q_taken_mean": [
+    7.9396803085774055,
+    11.038921061330349
+  ],
+  "q_taken_mean_T": [
+    1195,
+    11204
+  ],
+  "target_max_qvals_mean": [
+    12.588023012552302,
+    11.446038763730675
+  ],
+  "target_max_qvals_mean_T": [
+    1195,
+    11204
+  ],
+  "target_mean": [
+    12.192198123692469,
+    11.079581500457689
+  ],
+  "target_mean_T": [
+    1195,
+    11204
+  ],
+  "td_error_abs": [
+    9.206814690115063,
+    1.558145198713385
+  ],
+  "td_error_abs_T": [
+    1195,
+    11204
+  ],
+  "test_ep_length_mean": [
+    50.0
+  ],
+  "test_ep_length_mean_T": [
+    50
+  ],
+  "test_only_built_in_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "test_only_built_in_return_mean_T": [
+    50
+  ],
+  "test_only_built_in_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "test_only_built_in_return_std_T": [
+    50
+  ],
+  "test_only_custom_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "test_only_custom_return_mean_T": [
+    50
+  ],
+  "test_only_custom_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "test_only_custom_return_std_T": [
+    50
+  ],
+  "test_summed_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "test_summed_return_mean_T": [
+    50
+  ],
+  "test_summed_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "test_summed_return_std_T": [
+    50
+  ]
+}

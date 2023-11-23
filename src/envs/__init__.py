@@ -5,12 +5,11 @@ import sys
 import os
 import gym
 from gym import ObservationWrapper, spaces
-from gym.envs import registry as gym_registry
 from gym.spaces import flatdim
 import numpy as np
 from gym.wrappers import TimeLimit as GymTimeLimit
 
-from CustomStarCraftEnv.CustomStarCraftEnv import CustomStarCraftEnv
+from custom.CustomStarCraftEnv.CustomStarCraftEnv import CustomStarCraftEnv
 
 
 def env_fn(env, **kwargs) -> MultiAgentEnv:

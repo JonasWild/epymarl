@@ -1,0 +1,244 @@
+{
+  "SplitInGroups_count": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.218909"
+    ],
+    "values": [
+      0.02
+    ]
+  },
+  "SplitInGroups_reward": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.218909"
+    ],
+    "values": [
+      0.001
+    ]
+  },
+  "custom_coop_summed_mean": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.218909"
+    ],
+    "values": [
+      1.05
+    ]
+  },
+  "epsilon": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:20:22.102590"
+    ],
+    "values": [
+      1.0
+    ]
+  },
+  "meta_learner_loss_mean": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.216909"
+    ],
+    "values": [
+      0.006566890953676886
+    ]
+  },
+  "meta_learner_prediction_mean": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.216909"
+    ],
+    "values": [
+      0.8498059393229457
+    ]
+  },
+  "metric_AgentsLevelMetric": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.216909"
+    ],
+    "values": [
+      12.36
+    ]
+  },
+  "metric_AgentsRewardMetric": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.217909"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "metric_AgentsScoreMetric": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.217909"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "metric_CoupledCollectedFood": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.218909"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "metric_FirstAgentCoupleRewardMetric": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.217909"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "metric_FirstAgentRewardMetric": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.217909"
+    ],
+    "values": [
+      -1.0
+    ]
+  },
+  "metric_HighestLevelFoodMetric": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.216909"
+    ],
+    "values": [
+      5.16
+    ]
+  },
+  "metric_StepsSpendWaitingAtFruit": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.218909"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "metric_StepsTillAllAgentsCollect": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.217909"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_ep_length_mean": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.212909"
+    ],
+    "values": [
+      100.0
+    ]
+  },
+  "test_only_built_in_return_mean": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.212909"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_only_built_in_return_std": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.212909"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_only_custom_return_mean": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.212909"
+    ],
+    "values": [
+      0.001
+    ]
+  },
+  "test_only_custom_return_std": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.212909"
+    ],
+    "values": [
+      0.009949874371066198
+    ]
+  },
+  "test_summed_return_mean": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.211909"
+    ],
+    "values": [
+      0.001
+    ]
+  },
+  "test_summed_return_std": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-10-20T08:23:40.211909"
+    ],
+    "values": [
+      0.009949874371066198
+    ]
+  }
+}

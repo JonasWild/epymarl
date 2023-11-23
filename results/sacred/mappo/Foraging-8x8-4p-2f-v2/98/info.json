@@ -1,0 +1,218 @@
+{
+  "advantage_mean": [
+    0.08255720740448041
+  ],
+  "advantage_mean_T": [
+    2852
+  ],
+  "agent_grad_norm": [
+    0.05384354293346405
+  ],
+  "agent_grad_norm_T": [
+    2852
+  ],
+  "behaviour_SplitInGroups_count": [
+    0.006562500000000001
+  ],
+  "behaviour_SplitInGroups_count_T": [
+    2852
+  ],
+  "behaviour_SplitInGroups_reward": [
+    0.065625
+  ],
+  "behaviour_SplitInGroups_reward_T": [
+    2852
+  ],
+  "critic_grad_norm": [
+    1.4986110925674438
+  ],
+  "critic_grad_norm_T": [
+    2852
+  ],
+  "critic_loss": [
+    0.05017279088497162
+  ],
+  "critic_loss_T": [
+    2852
+  ],
+  "custom_coop_summed_mean": [
+    0.03609375
+  ],
+  "custom_coop_summed_mean_T": [
+    2852
+  ],
+  "ep_length_mean": [
+    89.125
+  ],
+  "ep_length_mean_T": [
+    2852
+  ],
+  "meta_learner_loss_mean": [
+    1.3343089818954468
+  ],
+  "meta_learner_loss_mean_T": [
+    2852
+  ],
+  "meta_learner_prediction_mean": [
+    1.0911682590680278
+  ],
+  "meta_learner_prediction_mean_T": [
+    2852
+  ],
+  "metric_AgentsLevelMetric": [
+    12.03125
+  ],
+  "metric_AgentsLevelMetric_T": [
+    2852
+  ],
+  "metric_AgentsRewardMetric": [
+    0.0
+  ],
+  "metric_AgentsRewardMetric_T": [
+    2852
+  ],
+  "metric_AgentsScoreMetric": [
+    0.0
+  ],
+  "metric_AgentsScoreMetric_T": [
+    2852
+  ],
+  "metric_CoupledCollectedFood": [
+    0.0
+  ],
+  "metric_CoupledCollectedFood_T": [
+    2852
+  ],
+  "metric_FirstAgentCoupleRewardMetric": [
+    150.0
+  ],
+  "metric_FirstAgentCoupleRewardMetric_T": [
+    2852
+  ],
+  "metric_FirstAgentRewardMetric": [
+    150.0
+  ],
+  "metric_FirstAgentRewardMetric_T": [
+    2852
+  ],
+  "metric_HighestAgentLevelMetric": [
+    4.40625
+  ],
+  "metric_HighestAgentLevelMetric_T": [
+    2852
+  ],
+  "metric_HighestLevelFoodMetric": [
+    4.8125
+  ],
+  "metric_HighestLevelFoodMetric_T": [
+    2852
+  ],
+  "metric_LowestAgentLevelMetric": [
+    1.625
+  ],
+  "metric_LowestAgentLevelMetric_T": [
+    2852
+  ],
+  "metric_StepsSpendWaitingAtFruit": [
+    0.0
+  ],
+  "metric_StepsSpendWaitingAtFruit_T": [
+    2852
+  ],
+  "metric_StepsTillAllAgentsCollect": [
+    150.0
+  ],
+  "metric_StepsTillAllAgentsCollect_T": [
+    2852
+  ],
+  "only_built_in_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 1.0247113997113997
+    }
+  ],
+  "only_built_in_return_mean_T": [
+    2852
+  ],
+  "only_built_in_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.7343817502211619
+    }
+  ],
+  "only_built_in_return_std_T": [
+    2852
+  ],
+  "only_custom_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "only_custom_return_mean_T": [
+    2852
+  ],
+  "only_custom_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "only_custom_return_std_T": [
+    2852
+  ],
+  "pg_loss": [
+    -0.10055750608444214
+  ],
+  "pg_loss_T": [
+    2852
+  ],
+  "pi_max": [
+    0.23137327731909624
+  ],
+  "pi_max_T": [
+    2852
+  ],
+  "q_taken_mean": [
+    0.08070874849509391
+  ],
+  "q_taken_mean_T": [
+    2852
+  ],
+  "summed_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 1.0247113997113997
+    }
+  ],
+  "summed_return_mean_T": [
+    2852
+  ],
+  "summed_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.7343817502211619
+    }
+  ],
+  "summed_return_std_T": [
+    2852
+  ],
+  "target_mean": [
+    0.16326596124978085
+  ],
+  "target_mean_T": [
+    2852
+  ],
+  "td_error_abs": [
+    0.09441863671258656
+  ],
+  "td_error_abs_T": [
+    2852
+  ]
+}

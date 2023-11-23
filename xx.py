@@ -1,6 +1,6 @@
 import numpy as np
 
-from myutils.myutils import pad_second_dim
+from custom.myutils.myutils import pad_second_dim
 
 d = 15
 actions_episode = [np.zeros(shape=(32, 2, 15)).tolist(), np.zeros(shape=(16, 2, 15)).tolist()]

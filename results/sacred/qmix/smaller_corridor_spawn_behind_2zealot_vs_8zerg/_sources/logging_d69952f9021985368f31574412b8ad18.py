@@ -1,18 +1,11 @@
-import io
 import os
 from collections import defaultdict
-
-import PIL
 
 import logging
 import numpy as np
 import matplotlib.pyplot as plt
-from PIL import Image
-from io import BytesIO
-import torch
-from torchvision.transforms import ToTensor
 
-from myutils.HeatSC2map import MyHeatmap, HeatSC2map
+from custom.myutils.HeatSC2map import MyHeatmap, HeatSC2map
 
 
 class Logger:

@@ -1,0 +1,255 @@
+{
+  "custom_coop_summed_mean": {
+    "steps": [
+      50
+    ],
+    "timestamps": [
+      "2023-10-11T10:14:09.829778"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "epsilon": {
+    "steps": [
+      50
+    ],
+    "timestamps": [
+      "2023-10-11T10:10:55.301569"
+    ],
+    "values": [
+      1.0
+    ]
+  },
+  "grad_norm": {
+    "steps": [
+      1567
+    ],
+    "timestamps": [
+      "2023-10-11T10:14:12.292900"
+    ],
+    "values": [
+      2462.90478515625
+    ]
+  },
+  "loss": {
+    "steps": [
+      1567
+    ],
+    "timestamps": [
+      "2023-10-11T10:14:12.292900"
+    ],
+    "values": [
+      138.2102508544922
+    ]
+  },
+  "meta_learner_loss_mean": {
+    "steps": [
+      50
+    ],
+    "timestamps": [
+      "2023-10-11T10:12:19.048586"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "metric_AverageCooperationLevelMetric": {
+    "steps": [
+      50
+    ],
+    "timestamps": [
+      "2023-10-11T10:14:09.828778"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "metric_AverageFoodPerAgentMetric": {
+    "steps": [
+      50
+    ],
+    "timestamps": [
+      "2023-10-11T10:14:09.827777"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "metric_EfficiencyMetric": {
+    "steps": [
+      50
+    ],
+    "timestamps": [
+      "2023-10-11T10:14:09.828778"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "metric_FoodLeftUncollectedMetric": {
+    "steps": [
+      50
+    ],
+    "timestamps": [
+      "2023-10-11T10:14:09.828778"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "metric_HighestLevelFoodCollectedMetric": {
+    "steps": [
+      50
+    ],
+    "timestamps": [
+      "2023-10-11T10:14:09.828778"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "metric_StepsTakenMetric": {
+    "steps": [
+      50
+    ],
+    "timestamps": [
+      "2023-10-11T10:14:09.828778"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "metric_TotalFoodCollectedMetric": {
+    "steps": [
+      50
+    ],
+    "timestamps": [
+      "2023-10-11T10:14:09.827777"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "q_taken_mean": {
+    "steps": [
+      1567
+    ],
+    "timestamps": [
+      "2023-10-11T10:14:12.293900"
+    ],
+    "values": [
+      2.366601998743618
+    ]
+  },
+  "target_max_qvals_mean": {
+    "steps": [
+      1567
+    ],
+    "timestamps": [
+      "2023-10-11T10:14:12.293900"
+    ],
+    "values": [
+      4.921765004287652
+    ]
+  },
+  "target_mean": {
+    "steps": [
+      1567
+    ],
+    "timestamps": [
+      "2023-10-11T10:14:12.293900"
+    ],
+    "values": [
+      4.781622676691129
+    ]
+  },
+  "td_error_abs": {
+    "steps": [
+      1567
+    ],
+    "timestamps": [
+      "2023-10-11T10:14:12.293900"
+    ],
+    "values": [
+      10.039165952058072
+    ]
+  },
+  "test_ep_length_mean": {
+    "steps": [
+      50
+    ],
+    "timestamps": [
+      "2023-10-11T10:12:19.044851"
+    ],
+    "values": [
+      50.0
+    ]
+  },
+  "test_only_built_in_return_mean": {
+    "steps": [
+      50
+    ],
+    "timestamps": [
+      "2023-10-11T10:12:19.043852"
+    ],
+    "values": [
+      0.034333333333333334
+    ]
+  },
+  "test_only_built_in_return_std": {
+    "steps": [
+      50
+    ],
+    "timestamps": [
+      "2023-10-11T10:12:19.043852"
+    ],
+    "values": [
+      0.12242503375081785
+    ]
+  },
+  "test_only_custom_return_mean": {
+    "steps": [
+      50
+    ],
+    "timestamps": [
+      "2023-10-11T10:12:19.043852"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_only_custom_return_std": {
+    "steps": [
+      50
+    ],
+    "timestamps": [
+      "2023-10-11T10:12:19.043852"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_summed_return_mean": {
+    "steps": [
+      50
+    ],
+    "timestamps": [
+      "2023-10-11T10:12:19.042853"
+    ],
+    "values": [
+      0.034333333333333334
+    ]
+  },
+  "test_summed_return_std": {
+    "steps": [
+      50
+    ],
+    "timestamps": [
+      "2023-10-11T10:12:19.042853"
+    ],
+    "values": [
+      0.12242503375081785
+    ]
+  }
+}

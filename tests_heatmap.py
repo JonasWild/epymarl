@@ -2,8 +2,6 @@
 import numpy as np
 from matplotlib import pyplot as plt, gridspec
 
-from myutils.HeatSC2map import HeatSC2map
-
 heatmap_data = np.random.rand(14, 100)
 
 # Calculate the aspect ratio of the heatmap data

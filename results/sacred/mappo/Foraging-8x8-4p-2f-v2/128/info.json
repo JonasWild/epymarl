@@ -1,0 +1,236 @@
+{
+  "advantage_mean": [
+    0.021630682296937067
+  ],
+  "advantage_mean_T": [
+    2486
+  ],
+  "agent_grad_norm": [
+    0.03057265840470791
+  ],
+  "agent_grad_norm_T": [
+    2486
+  ],
+  "behaviour_CoordinatedPairMovement_count": [
+    0.0
+  ],
+  "behaviour_CoordinatedPairMovement_count_T": [
+    2486
+  ],
+  "behaviour_CoordinatedPairMovement_reward": [
+    0.0
+  ],
+  "behaviour_CoordinatedPairMovement_reward_T": [
+    2486
+  ],
+  "behaviour_RewardClosestFruit_count": [
+    0.856639545028386
+  ],
+  "behaviour_RewardClosestFruit_count_T": [
+    2486
+  ],
+  "behaviour_RewardClosestFruit_reward": [
+    0.8274248816373044
+  ],
+  "behaviour_RewardClosestFruit_reward_T": [
+    2486
+  ],
+  "behaviour_SplitInGroups_count": [
+    0.0
+  ],
+  "behaviour_SplitInGroups_count_T": [
+    2486
+  ],
+  "behaviour_SplitInGroups_reward": [
+    0.0
+  ],
+  "behaviour_SplitInGroups_reward_T": [
+    2486
+  ],
+  "critic_grad_norm": [
+    0.2907208800315857
+  ],
+  "critic_grad_norm_T": [
+    2486
+  ],
+  "critic_loss": [
+    0.04605652391910553
+  ],
+  "critic_loss_T": [
+    2486
+  ],
+  "custom_coop_summed_mean": [
+    0.28067740444428163
+  ],
+  "custom_coop_summed_mean_T": [
+    2486
+  ],
+  "ep_length_mean": [
+    77.6875
+  ],
+  "ep_length_mean_T": [
+    2486
+  ],
+  "meta_learner_loss_mean": [
+    0.4969325661659241
+  ],
+  "meta_learner_loss_mean_T": [
+    2486
+  ],
+  "meta_learner_prediction_mean": [
+    0.00029955068647813415
+  ],
+  "meta_learner_prediction_mean_T": [
+    2486
+  ],
+  "metric_AgentsRewardMetric": [
+    0.0
+  ],
+  "metric_AgentsRewardMetric_T": [
+    2486
+  ],
+  "metric_AgentsScoreMetric": [
+    0.0
+  ],
+  "metric_AgentsScoreMetric_T": [
+    2486
+  ],
+  "metric_CoupledCollectedFood": [
+    0.0
+  ],
+  "metric_CoupledCollectedFood_T": [
+    2486
+  ],
+  "metric_FirstAgentCoupleRewardMetric": [
+    150.0
+  ],
+  "metric_FirstAgentCoupleRewardMetric_T": [
+    2486
+  ],
+  "metric_FirstAgentRewardMetric": [
+    150.0
+  ],
+  "metric_FirstAgentRewardMetric_T": [
+    2486
+  ],
+  "metric_HighestAgentLevelMetric": [
+    6.9375
+  ],
+  "metric_HighestAgentLevelMetric_T": [
+    2486
+  ],
+  "metric_HighestLevelFoodMetric": [
+    7.90625
+  ],
+  "metric_HighestLevelFoodMetric_T": [
+    2486
+  ],
+  "metric_LowestAgentLevelMetric": [
+    2.3125
+  ],
+  "metric_LowestAgentLevelMetric_T": [
+    2486
+  ],
+  "metric_StepsSpendWaitingAtFruit": [
+    0.0
+  ],
+  "metric_StepsSpendWaitingAtFruit_T": [
+    2486
+  ],
+  "metric_StepsTillAllAgentsCollect": [
+    150.0
+  ],
+  "metric_StepsTillAllAgentsCollect_T": [
+    2486
+  ],
+  "only_built_in_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.49211644836644836
+    }
+  ],
+  "only_built_in_return_mean_T": [
+    2486
+  ],
+  "only_built_in_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.7947752687313897
+    }
+  ],
+  "only_built_in_return_std_T": [
+    2486
+  ],
+  "only_custom_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.023271343955770137
+    }
+  ],
+  "only_custom_return_mean_T": [
+    2486
+  ],
+  "only_custom_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0219018129289442
+    }
+  ],
+  "only_custom_return_std_T": [
+    2486
+  ],
+  "pg_loss": [
+    -0.03857580944895744
+  ],
+  "pg_loss_T": [
+    2486
+  ],
+  "pi_max": [
+    0.2863800466204495
+  ],
+  "pi_max_T": [
+    2486
+  ],
+  "q_taken_mean": [
+    -0.2475786278157683
+  ],
+  "q_taken_mean_T": [
+    2486
+  ],
+  "summed_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.5153877923222185
+    }
+  ],
+  "summed_return_mean_T": [
+    2486
+  ],
+  "summed_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.7918846763106099
+    }
+  ],
+  "summed_return_std_T": [
+    2486
+  ],
+  "target_mean": [
+    -0.22594799922534944
+  ],
+  "target_mean_T": [
+    2486
+  ],
+  "td_error_abs": [
+    0.07193539436076403
+  ],
+  "td_error_abs_T": [
+    2486
+  ]
+}

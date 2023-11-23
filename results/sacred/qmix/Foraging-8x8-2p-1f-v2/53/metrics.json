@@ -1,0 +1,112 @@
+{
+  "custom_coop_summed_mean": {
+    "steps": [
+      12
+    ],
+    "timestamps": [
+      "2023-10-11T08:19:19.827510"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "epsilon": {
+    "steps": [
+      12
+    ],
+    "timestamps": [
+      "2023-10-11T08:19:15.172179"
+    ],
+    "values": [
+      1.0
+    ]
+  },
+  "meta_learner_loss_mean": {
+    "steps": [
+      12
+    ],
+    "timestamps": [
+      "2023-10-11T08:19:19.827510"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_ep_length_mean": {
+    "steps": [
+      12
+    ],
+    "timestamps": [
+      "2023-10-11T08:19:19.827510"
+    ],
+    "values": [
+      50.0
+    ]
+  },
+  "test_only_built_in_return_mean": {
+    "steps": [
+      12
+    ],
+    "timestamps": [
+      "2023-10-11T08:19:19.827510"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_only_built_in_return_std": {
+    "steps": [
+      12
+    ],
+    "timestamps": [
+      "2023-10-11T08:19:19.827510"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_only_custom_return_mean": {
+    "steps": [
+      12
+    ],
+    "timestamps": [
+      "2023-10-11T08:19:19.826511"
+    ],
+    "values": [
+      7.548500286974013
+    ]
+  },
+  "test_only_custom_return_std": {
+    "steps": [
+      12
+    ],
+    "timestamps": [
+      "2023-10-11T08:19:19.826511"
+    ],
+    "values": [
+      7.475051580752829
+    ]
+  },
+  "test_summed_return_mean": {
+    "steps": [
+      12
+    ],
+    "timestamps": [
+      "2023-10-11T08:19:19.826511"
+    ],
+    "values": [
+      7.548500286974013
+    ]
+  },
+  "test_summed_return_std": {
+    "steps": [
+      12
+    ],
+    "timestamps": [
+      "2023-10-11T08:19:19.826511"
+    ],
+    "values": [
+      7.475051580752829
+    ]
+  }
+}

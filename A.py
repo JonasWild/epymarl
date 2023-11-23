@@ -1,31 +1,23 @@
 import numpy as np
 
-def calculate_differences(runner_actions, gym_actions):
-    differences = []
-    for r_action, g_action in zip(runner_actions, gym_actions):
-        # Convert gym action to int for comparison
-        g_action_int = [int(val) for val in g_action]
+grid = np.array([[0, 0, 0, 0, 0, 0, 0, 0],
+                 [0, 0, 3, 0, 0, 0, 0, 0],
+                 [0, 0, 0, 0, 0, 0, 0, 0],
+                 [0, 0, 0, 0, 0, 0, 0, 0],
+                 [0, 0, 0, 0, 0, 0, 0, 0],
+                 [0, 0, 0, 2, 0, 0, 0, 0],
+                 [0, 0, 0, 0, 0, 0, 0, 0],
+                 [0, 0, 0, 0, 0, 0, 0, 0]])
 
-        # Count the differences
-        diff_count = sum(1 for ra, ga in zip(r_action, g_action_int) if ra != ga)
-        differences.append(diff_count)
+# Getting the indices of cells where food is present (value > 0)
+food_positions = np.argwhere(grid > 0)
 
-    return differences
+# Getting the level of food at each position
+food_levels = [grid[position[0], position[1]] for position in food_positions]
 
+# Converting the positions to tuples
+food_positions = [tuple(position) for position in food_positions]
 
-runner_actions = [[[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]]
-
-gym_actions = [np.array([0., 1., 1., 1., 1., 1., 0., 1., 1., 1., 1., 1., 1., 1., 1., 1., 0.,
-       0.]), np.array([0., 1., 1., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
-       0.]), np.array([0., 1., 1., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
-       0.]), np.array([0., 1., 1., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
-       0.]), np.array([0., 1., 1., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
-       0.]), np.array([0., 1., 1., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
-       0.]), np.array([0., 1., 1., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
-       0.]), np.array([0., 1., 1., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
-       0.]), np.array([0., 1., 1., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
-       0.]), np.array([0., 1., 1., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
-       0.])]
-
-differences = calculate_differences(runner_actions, gym_actions)
-print(differences)
+# Displaying the positions and levels of the food
+for position, level in zip(food_positions, food_levels):
+    print(f"Food at position {position} with level {level}")

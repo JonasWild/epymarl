@@ -1,0 +1,376 @@
+{
+  "advantage_mean": [
+    2.3545357274113567
+  ],
+  "advantage_mean_T": [
+    5697
+  ],
+  "agent_grad_norm": [
+    1.3058505058288574
+  ],
+  "agent_grad_norm_T": [
+    5697
+  ],
+  "behaviour_SplitInGroups_count": [
+    1.3125,
+    3.09375
+  ],
+  "behaviour_SplitInGroups_count_T": [
+    5697,
+    5697
+  ],
+  "behaviour_SplitInGroups_reward": [
+    7.212500000000003,
+    19.8125
+  ],
+  "behaviour_SplitInGroups_reward_T": [
+    5697,
+    5697
+  ],
+  "critic_grad_norm": [
+    41.17695236206055
+  ],
+  "critic_grad_norm_T": [
+    5697
+  ],
+  "critic_loss": [
+    8.93823528289795
+  ],
+  "critic_loss_T": [
+    5697
+  ],
+  "custom_coop_summed_mean": [
+    8.525,
+    22.906250000000004
+  ],
+  "custom_coop_summed_mean_T": [
+    5697,
+    5697
+  ],
+  "ep_length_mean": [
+    89.015625,
+    85.515625
+  ],
+  "ep_length_mean_T": [
+    5697,
+    11170
+  ],
+  "meta_learner_loss_mean": [
+    0.0,
+    0.0
+  ],
+  "meta_learner_loss_mean_T": [
+    5697,
+    5697
+  ],
+  "meta_learner_prediction_mean": [
+    0.575991226807799,
+    0.5422957653783519
+  ],
+  "meta_learner_prediction_mean_T": [
+    5697,
+    5697
+  ],
+  "metric_AgentsLevelMetric": [
+    11.734375,
+    11.8671875,
+    12.135416666666668
+  ],
+  "metric_AgentsLevelMetric_T": [
+    5697,
+    5697,
+    11170
+  ],
+  "metric_AgentsRewardMetric": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "metric_AgentsRewardMetric_T": [
+    5697,
+    5697,
+    11170
+  ],
+  "metric_AgentsScoreMetric": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "metric_AgentsScoreMetric_T": [
+    5697,
+    5697,
+    11170
+  ],
+  "metric_CoupledCollectedFood": [
+    0.0,
+    0.03125,
+    0.06249999999999999
+  ],
+  "metric_CoupledCollectedFood_T": [
+    5697,
+    5697,
+    11170
+  ],
+  "metric_FirstAgentCoupleRewardMetric": [
+    150.0,
+    147.875,
+    146.53645833333337
+  ],
+  "metric_FirstAgentCoupleRewardMetric_T": [
+    5697,
+    5697,
+    11170
+  ],
+  "metric_FirstAgentRewardMetric": [
+    150.0,
+    116.28125,
+    102.81250000000003
+  ],
+  "metric_FirstAgentRewardMetric_T": [
+    5697,
+    5697,
+    11170
+  ],
+  "metric_HighestAgentLevelMetric": [
+    4.28125,
+    4.34375,
+    4.427083333333334
+  ],
+  "metric_HighestAgentLevelMetric_T": [
+    5697,
+    5697,
+    11170
+  ],
+  "metric_HighestLevelFoodMetric": [
+    4.828125,
+    4.875,
+    4.828125
+  ],
+  "metric_HighestLevelFoodMetric_T": [
+    5697,
+    5697,
+    11170
+  ],
+  "metric_LowestAgentLevelMetric": [
+    1.546875,
+    1.5390625,
+    1.59375
+  ],
+  "metric_LowestAgentLevelMetric_T": [
+    5697,
+    5697,
+    11170
+  ],
+  "metric_StepsSpendWaitingAtFruit": [
+    0.0,
+    1.5625,
+    2.0104166666666665
+  ],
+  "metric_StepsSpendWaitingAtFruit_T": [
+    5697,
+    5697,
+    11170
+  ],
+  "metric_StepsTillAllAgentsCollect": [
+    150.0,
+    150.0,
+    150.0
+  ],
+  "metric_StepsTillAllAgentsCollect_T": [
+    5697,
+    5697,
+    11170
+  ],
+  "only_built_in_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.345374503968254
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.4424135326479076
+    }
+  ],
+  "only_built_in_return_mean_T": [
+    5697,
+    11170
+  ],
+  "only_built_in_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.387405698165393
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.3784974257509132
+    }
+  ],
+  "only_built_in_return_std_T": [
+    5697,
+    11170
+  ],
+  "only_custom_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 51.272219048812985
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 47.28853663348127
+    }
+  ],
+  "only_custom_return_mean_T": [
+    5697,
+    11170
+  ],
+  "only_custom_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 34.51277128727217
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 37.267186611399566
+    }
+  ],
+  "only_custom_return_std_T": [
+    5697,
+    11170
+  ],
+  "pg_loss": [
+    -2.376788854598999
+  ],
+  "pg_loss_T": [
+    5697
+  ],
+  "pi_max": [
+    0.22677180012506581
+  ],
+  "pi_max_T": [
+    5697
+  ],
+  "q_taken_mean": [
+    0.17708205841959035
+  ],
+  "q_taken_mean_T": [
+    5697
+  ],
+  "summed_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 51.617593552781244
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 47.730950166129176
+    }
+  ],
+  "summed_return_mean_T": [
+    5697,
+    11170
+  ],
+  "summed_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 34.247792165135785
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 36.99717591615186
+    }
+  ],
+  "summed_return_std_T": [
+    5697,
+    11170
+  ],
+  "target_mean": [
+    2.531618032242847
+  ],
+  "target_mean_T": [
+    5697
+  ],
+  "td_error_abs": [
+    2.4356454397599614
+  ],
+  "td_error_abs_T": [
+    5697
+  ],
+  "test_ep_length_mean": [
+    90.625
+  ],
+  "test_ep_length_mean_T": [
+    5697
+  ],
+  "test_only_built_in_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.3167743281024531
+    }
+  ],
+  "test_only_built_in_return_mean_T": [
+    5697
+  ],
+  "test_only_built_in_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.3683608235374808
+    }
+  ],
+  "test_only_built_in_return_std_T": [
+    5697
+  ],
+  "test_only_custom_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 49.14555373741314
+    }
+  ],
+  "test_only_custom_return_mean_T": [
+    5697
+  ],
+  "test_only_custom_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 35.767649140108674
+    }
+  ],
+  "test_only_custom_return_std_T": [
+    5697
+  ],
+  "test_summed_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 49.46232806551559
+    }
+  ],
+  "test_summed_return_mean_T": [
+    5697
+  ],
+  "test_summed_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 35.54513063093421
+    }
+  ],
+  "test_summed_return_std_T": [
+    5697
+  ]
+}

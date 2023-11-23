@@ -1,4 +1,95 @@
+reward_with_meta_learner: true
+meta_learner_multiplier: 100
+use_meta_target_net: true
+
 behaviours:
+  splitInGroups:
+    enabled: true
+    reward: 0.5
+    intermediate_rewards_enabled: true
+  coordinatedPairMovement:
+    enabled: true
+    reward: 0.2
+  rewardClosestFruit:
+    enabled: false
+    reward: 0.0005
+  balanceLevelRewardAdaption:
+    reward: 1
+    multiplier: 0.0005
+    enabled: false
+
+#  balancedParticipation:
+#    enabled: true
+#    reward:
+#      balanced_participation_bonus: 5   # The reward bonus for balanced participation among agents
+#      participation_balance_threshold: 3 # The maximum allowed difference in participation rates for the bonus to be awarded
+
+  # If you have other behaviors, you can add them similarly
+  # Example:
+  # anotherBehaviour:
+  #   enabled: true
+  #   reward:
+  #     # ... (other specific parameters for this behaviour)
 
 metrics:
+  highestLevelFood:
+    enabled: true
+    config:
+      # ... (add any additional config parameters specific to this metric)
+
+  agentsSummedLevel:
+    enabled: true
+    config:
+      # ...
+
+  agentsDeviationLevel:
+    enabled: true
+    config:
+      # ...
+
+  highestAgentLevel:
+    enabled: true
+    config:
+    # ...
+
+  lowestAgentLevel:
+    enabled: true
+    config:
+      # ...
+
+  agentsScore:
+    enabled: true
+    config:
+      # ...
+
+  agentsReward:
+    enabled: true
+    config:
+      # ...
+
+  firstAgentReward:
+    enabled: true
+    config:
+      # ... (add any additional config parameters specific to this metric)
+
+  firstAgentCoupleReward:
+    enabled: true
+    config:
+      # ... (add any additional config parameters specific to this metric)
+
+  stepsTillAllAgentsCollect:
+    enabled: true
+    config:
+      # ... (add any additional config parameters specific to this metric)
+
+  stepsSpendWaitingAtFruit:
+    enabled: true
+    config:
+      # ... (add any additional config parameters specific to this metric)
+
+  coupledCollectedFood:
+    enabled: true
+    config:
+      # ... (add any additional config parameters specific to this metric)
+
 

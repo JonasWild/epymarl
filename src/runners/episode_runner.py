@@ -3,17 +3,18 @@ from functools import partial
 from components.episode_buffer import EpisodeBatch
 import numpy as np
 
-import CustomStarCraftEnv.CustomStarCraftEnv
-from CustomStarCraftEnv.Behaviours.BehaviourRegistry import BehaviourRegistry
-from CustomStarCraftEnv.Behaviours.StayTogether import StayTogether
-from CustomStarCraftEnv.Behaviours.TeamUp import TeamUp
-from CustomStarCraftEnv.Metrics.MetricRegistry import MetricRegistry
-from CustomStarCraftEnv.components.meta_replay_buffer import MetaReplayBuffer
-from CustomStarCraftEnv.learners.custom_reward_learner import CustomRewardLearner
+import custom.CustomStarCraftEnv.Metrics
+from custom.BehaviourRegistry import BehaviourRegistry
+from custom.CustomStarCraftEnv.Behaviours.StayTogether import StayTogether
+from custom.CustomStarCraftEnv.Behaviours.TeamUp import TeamUp
+from custom.MetricRegistry import MetricRegistry
+from custom.meta_replay_buffer import MetaReplayBuffer
+from custom.custom_reward_learner import CustomRewardLearner
+from custom.lbforaging.behaviours import BEHAVIOUR_MAP
+from custom.lbforaging.metrics import METRIC_MAP
 
-from myutils.HeatSC2map import MyHeatmap
-from myutils.myutils import pad_second_dim
-from src.components.episode_buffer import ReplayBuffer
+from custom.myutils.HeatSC2map import MyHeatmap
+from custom.myutils.myutils import pad_second_dim
 
 
 class ReturnMetric:
@@ -36,6 +37,11 @@ class EpisodeRunner:
         self.args.env_args.pop("enemy_in_distance", None)
 
     def __init__(self, args, logger):
+        self.meta_buffer = None
+        self.new_meta_batch = None
+        self.mac = None
+        self.new_batch = None
+        self.batch = None
         self.args = args
         self.logger = logger
         self.batch_size = self.args.batch_size_run
@@ -43,15 +49,29 @@ class EpisodeRunner:
 
         self.init_behaviour_classes()
 
+        metrics_map = None
+        behaviour_map = None
+        self.custom_env_args = None
+        if "sc2" in self.args.env_args['key']:
+            self.custom_env_args = self.args.env_args.get("custom_env_args")
+            metrics_map = custom.CustomStarCraftEnv.Metrics.METRIC_MAP
+            behaviour_map = custom.CustomStarCraftEnv.Behaviours.BEHAVIOUR_MAP
+        elif "Foraging" in self.args.env_args['key']:
+            self.custom_env_args = self.args.env_args.pop("custom_env_args")
+            metrics_map = METRIC_MAP
+            behaviour_map = BEHAVIOUR_MAP
+
         self.env = env_REGISTRY[self.args.env](**self.args.env_args)
 
         self.behaviour_registry = BehaviourRegistry(
-            self.args.env_args.get("custom_env_args"),
-            self.env.n_agents
+            self.custom_env_args,
+            self.env.n_agents,
+            behaviour_map
         )
         self.metric_registry = MetricRegistry(
-            self.args.env_args.get("custom_env_args"),
-            self.env.n_agents
+            self.custom_env_args,
+            self.env.n_agents,
+            metrics_map
         )
 
         self.episode_limit = self.env.episode_limit
@@ -84,8 +104,18 @@ class EpisodeRunner:
         self.n_obs = self.env.get_obs_size()
         self.n_actions = self.env.get_total_actions()
 
-        self.meta_learner = CustomRewardLearner(self.env.get_state_size(), 32, 1)
+        self.episode_meta_learner_predictions = []
+        self.reward_with_meta_learner = self.custom_env_args['reward_with_meta_learner']
+        self.use_meta_target_net = self.custom_env_args['use_meta_target_net']
+        self.meta_learner = CustomRewardLearner(self.env.get_state_size(), 32, 1,
+                                                use_target_network=self.use_meta_target_net
+                                                )
 
+    def get_original_env(self):
+        if "sc2" in self.args.env_args['key']:
+            return self.env
+        elif "Foraging" in self.args.env_args['key']:
+            return self.env.original_env.env
 
     def setup(self, scheme, groups, preprocess, mac):
         self.new_batch = partial(EpisodeBatch, scheme, groups, self.batch_size, self.episode_limit + 1,
@@ -93,12 +123,12 @@ class EpisodeRunner:
         self.mac = mac
 
         self.new_meta_batch = partial(MetaReplayBuffer, scheme, groups, self.batch_size, self.episode_limit + 1,
-                                 preprocess=None, device=self.args.device)
+                                      preprocess=None, device=self.args.device)
 
         self.meta_buffer = MetaReplayBuffer(
             scheme,
             groups,
-            64,
+            32,
             self.episode_limit + 1,
             preprocess=preprocess,
             device="cpu",
@@ -130,6 +160,7 @@ class EpisodeRunner:
         episode_total_return = 0
         episode_only_built_in_return = 0
         episode_only_custom_return = 0
+        meta_learner_predictions = []
         self.mac.init_hidden(batch_size=self.batch_size)
 
         self.behaviour_registry.reset_episode()
@@ -162,23 +193,29 @@ class EpisodeRunner:
             actions_sample = [[1 if action == i else 0 for i in range(self.n_actions)] for action in actions[0]]
             actions_episode.append(actions_sample)
 
-            custom_reward_from_behaviour = self.behaviour_registry.evaluate_behaviors(self.env, actions, obs)
+            custom_reward_from_behaviour = self.behaviour_registry.evaluate_behaviors(self.get_original_env(), actions, obs)
 
             reward, terminated, env_info = self.env.step(actions[0])
 
             # Predict the custom reward from the meta learner
             predicted_custom_reward = self.meta_learner.predict_reward(obs_for_meta_learner)
             predicted_custom_reward = predicted_custom_reward.item()
+            meta_learner_predictions.append(predicted_custom_reward)
 
-            self.metric_registry.add_metrics_data(self.env, actions, obs)
+            custom_reward = predicted_custom_reward if self.reward_with_meta_learner else custom_reward_from_behaviour
+
+            if test_mode:
+                self.metric_registry.add_metrics_data(self.get_original_env(), actions, obs)
 
             if test_mode and self.args.render:
                 self.env.render()
 
             episode_only_built_in_return += reward
-            episode_only_custom_return += predicted_custom_reward
 
-            reward += predicted_custom_reward
+            if self.args.allow_custom_rewards:
+                episode_only_custom_return += custom_reward
+                reward += custom_reward
+
             episode_total_return += reward
 
             post_transition_data = {
@@ -204,24 +241,31 @@ class EpisodeRunner:
             "obs": [self.env.get_obs()]
         }
 
-        self.metric_registry.evaluate_episode()
+        self.episode_meta_learner_predictions.append(sum(meta_learner_predictions) / max(len(meta_learner_predictions), 1))
 
         self.obs_per_episode.append(obs_episode)
         self.actions_per_episode.append(actions_episode)
 
-        if test_mode and self.args.render:
-            print(f"Episode return: {episode_total_return}")
         self.batch.update(last_data, ts=self.t)
 
         # Select actions in the last stored state
         actions = self.mac.select_actions(self.batch, t_ep=self.t, t_env=self.t_env, test_mode=test_mode)
         self.batch.update({"actions": actions}, ts=self.t)
 
-        cur_stats = self.test_stats if test_mode else self.train_stats
-        cur_total_returns = self.test_total_returns if test_mode else self.train_total_returns
-        cur_only_custom_returns = self.test_only_custom_returns if test_mode else self.train_only_custom_returns
-        cur_only_built_in_returns = self.test_only_built_in_returns if test_mode else self.train_only_built_in_returns
-        log_prefix = "test_" if test_mode else ""
+        if test_mode:
+            cur_stats = self.test_stats
+            cur_total_returns = self.test_total_returns
+            cur_only_custom_returns = self.test_only_custom_returns
+            cur_only_built_in_returns = self.test_only_built_in_returns
+            self.metric_registry.evaluate_episode(self.get_original_env())
+            log_prefix = "test_"
+        else:
+            cur_stats = self.train_stats
+            cur_total_returns = self.train_total_returns
+            cur_only_custom_returns = self.train_only_custom_returns
+            cur_only_built_in_returns = self.train_only_built_in_returns
+            log_prefix = ""
+
         cur_stats.update({k: cur_stats.get(k, 0) + env_info.get(k, 0) for k in set(cur_stats) | set(env_info)})
         cur_stats["n_episodes"] = 1 + cur_stats.get("n_episodes", 0)
         cur_stats["ep_length"] = self.t + cur_stats.get("ep_length", 0)
@@ -253,12 +297,15 @@ class EpisodeRunner:
             meta_learner_loss = self.meta_learner.train_model(episode_sample)
             self.meta_learner_loss_per_episode.append(meta_learner_loss)
 
-        if self.t_env - self.train_meta_target_net_t >= self.train_meta_target_net_interval:
+        if self.use_meta_target_net and self.t_env - self.train_meta_target_net_t >= self.train_meta_target_net_interval:
             self.meta_learner.update_target_network()
             self.train_meta_target_net_t = self.t_env
 
+        if len(self.train_total_returns) % 10000 == 0:
+            self._log(return_metrics, cur_stats, log_prefix)
+
         if test_mode and (len(self.test_total_returns) == self.args.test_nepisode):
-            self._log(return_metrics, cur_stats, log_prefix, stats_episode, custom_scalars)
+            self._log(return_metrics, cur_stats, log_prefix)
         elif self.t_env - self.log_train_stats_t >= self.args.runner_log_interval:
             if hasattr(self.mac.action_selector, "epsilon"):
                 self.logger.log_stat("epsilon", self.mac.action_selector.epsilon, self.t_env)
@@ -301,7 +348,7 @@ class EpisodeRunner:
 
         return self.batch
 
-    def _log(self, return_metrics: [ReturnMetric], stats, prefix, stats_episode, custom_scalars):
+    def _log(self, return_metrics: [ReturnMetric], stats, prefix):
         for return_metric in return_metrics:
             self.logger.log_stat(prefix + return_metric.name + "return_mean", np.mean(return_metric.returns),
                                  self.t_env)
@@ -312,14 +359,22 @@ class EpisodeRunner:
             if k != "n_episodes":
                 self.logger.log_stat(prefix + k + "_mean", v / stats["n_episodes"], self.t_env)
 
-        self.logger.log_stat("meta_learner_loss_mean", sum(self.meta_learner_loss_per_episode) / max(len(self.meta_learner_loss_per_episode), 1), self.t_env)
+        self.logger.log_stat("meta_learner_prediction_mean",
+                             sum(self.episode_meta_learner_predictions) / max(len(self.episode_meta_learner_predictions), 1),
+                             self.t_env)
+        self.episode_meta_learner_predictions.clear()
+
+        self.logger.log_stat("meta_learner_loss_mean",
+                             sum(self.meta_learner_loss_per_episode) / max(len(self.meta_learner_loss_per_episode), 1),
+                             self.t_env)
         self.meta_learner_loss_per_episode.clear()
 
         for k, v in self.metric_registry.get_metric_results().items():
             self.logger.log_stat("metric_" + k, v, self.t_env)
 
         mean_sum = 0
-        for k, v in self.behaviour_registry.get_behaviour_stats().items():
+        behaviour_stats = {} if self.behaviour_registry.get_behaviour_stats() is None else self.behaviour_registry.get_behaviour_stats().items()
+        for k, v in behaviour_stats:
             mean_sum += v
             self.logger.log_stat(k, v / stats["n_episodes"], self.t_env)
 

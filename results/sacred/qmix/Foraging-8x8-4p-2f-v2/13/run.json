@@ -1,0 +1,114 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "C:\\Users\\jonas\\Documents\\Github\\epymarl\\src",
+    "dependencies": [
+      "lbforaging==1.1.1",
+      "munch==2.5.0",
+      "numpy==1.23.1",
+      "sacred==0.8.2",
+      "torch==2.0.1"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl_0",
+    "repositories": [
+      {
+        "commit": "833cbf9d83f1bbe73d50f0a87ce0bb845b9c9819",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      },
+      {
+        "commit": "833cbf9d83f1bbe73d50f0a87ce0bb845b9c9819",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      },
+      {
+        "commit": "833cbf9d83f1bbe73d50f0a87ce0bb845b9c9819",
+        "dirty": true,
+        "url": "https://github.com/JonasWild/epymarl.git"
+      }
+    ],
+    "sources": [
+      [
+        "main.py",
+        "_sources\\main_8ee45f4584792ddeb4506833278e520a.py"
+      ],
+      [
+        "run.py",
+        "_sources\\run_db3e756727c1578cebfd2f06fda44e00.py"
+      ],
+      [
+        "utils\\logging.py",
+        "_sources\\logging_b360a50b4808da582e437364418ef061.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"C:\\Users\\jonas\\.conda\\envs\\pymarl\\lib\\site-packages\\sacred\\config\\captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\main.py\", line 147, in my_main\n    run(_run, config, _log)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\run.py\", line 60, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\run.py\", line 221, in run_sequential\n    runner.run(test_mode=True)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\src\\runners\\episode_runner.py\", line 185, in run\n    custom_reward_from_behaviour = self.behaviour_registry.evaluate_behaviors(self.get_original_env(), actions, obs)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\custom\\BehaviourRegistry.py\", line 88, in evaluate_behaviors\n    reward = behaviour.evaluate(env, actions, obs)\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\custom\\lbforaging\\behaviours\\SplitInGroups.py\", line 135, in evaluate\n    if self.is_moving_towards_food(pair, foods_positions[i]):\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\custom\\lbforaging\\behaviours\\SplitInGroups.py\", line 98, in is_moving_towards_food\n    current_positions = [self.pairs_actions[-1][i] for i in pair]\n",
+    "  File \"C:\\Users\\jonas\\Documents\\Github\\epymarl\\custom\\lbforaging\\behaviours\\SplitInGroups.py\", line 98, in <listcomp>\n    current_positions = [self.pairs_actions[-1][i] for i in pair]\n",
+    "TypeError: list indices must be integers or slices, not tuple\n"
+  ],
+  "heartbeat": "2023-10-11T11:03:23.520025",
+  "host": {
+    "ENV": {},
+    "cpu": "Unknown",
+    "gpus": {
+      "driver_version": "531.79",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 960",
+          "persistence_mode": false,
+          "total_memory": 2048
+        }
+      ]
+    },
+    "hostname": "DESKTOP-1HDPUO6",
+    "os": [
+      "Windows",
+      "Windows-10-10.0.22621-SP0"
+    ],
+    "python_version": "3.8.16"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2023-10-11T11:02:26.621303",
+  "status": "FAILED",
+  "stop_time": "2023-10-11T11:03:23.526046"
+}
