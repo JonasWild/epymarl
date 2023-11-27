@@ -1,14 +1,11 @@
-import lbforaging
 import numpy as np
 import os
-import random
 import collections
 from os.path import dirname, abspath
 from copy import deepcopy
 from sacred import Experiment, SETTINGS
-from sacred.observers import FileStorageObserver, MongoObserver
+from sacred.observers import FileStorageObserver
 from sacred.utils import apply_backspaces_and_linefeeds
-import sys
 import torch as th
 
 from utils.logging import get_logger
