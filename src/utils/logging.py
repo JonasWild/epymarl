@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from custom.myutils.HeatSC2map import MyHeatmap, HeatSC2map
-from src.runners import EpisodeRunner
+from runners import EpisodeRunner
 
 
 class Logger:
