@@ -193,9 +193,9 @@ class EpisodeRunner:
             actions_sample = [[1 if action == i else 0 for i in range(self.n_actions)] for action in actions[0]]
             actions_episode.append(actions_sample)
 
-            custom_reward_from_behaviour = self.behaviour_registry.evaluate_behaviors(self.get_original_env(), actions, obs)
-
             reward, terminated, env_info = self.env.step(actions[0])
+
+            custom_reward_from_behaviour = self.behaviour_registry.evaluate_behaviors(self.get_original_env(), actions, obs)
 
             # Predict the custom reward from the meta learner
             predicted_custom_reward = self.meta_learner.predict_reward(obs_for_meta_learner)

@@ -169,10 +169,10 @@ if __name__ == '__main__':
         # ("custom", "gymmatest", "customEnvDefault"),epyma
         # ("custom", "sc2MetaTimeObj", "customEnvSplitGroups"),
         ("lbforagingbase", "lbforagingenv", "lbforagingcustom"),
-        ("lbforagingbase", "lbforagingenv", "lbforagingcustom1"),
-        ("lbforagingbase", "lbforagingenv", "lbforagingcustom2"),
-        ("lbforagingbase", "lbforagingenv", "lbforagingcustom3"),
-        ("lbforagingbase", "lbforagingenv", "lbforagingcustom4"),
+        # ("lbforagingbase", "lbforagingenv", "lbforagingcustom1"),
+        # ("lbforagingbase", "lbforagingenv", "lbforagingcustom2"),
+        # ("lbforagingbase", "lbforagingenv", "lbforagingcustom3"),
+        # ("lbforagingbase", "lbforagingenv", "lbforagingcustom4"),
         # ("lbforagingbase", "lbforagingenv", "lbforagingcustom5"),
         # ("lbforagingbase", "lbforagingenv", "lbforagingcustom6"),
     ]

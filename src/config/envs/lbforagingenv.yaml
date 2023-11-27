@@ -12,6 +12,6 @@ log_interval: 25000
 runner_log_interval: 5000
 learner_log_interval: 5000
 runner_log_heatmaps_interval: 50000 # Log heatmaps every {} timesteps
-t_max: 5000000
+t_max: 10000000
 render: False
 allow_custom_rewards: True

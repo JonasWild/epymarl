@@ -1,14 +1,14 @@
-reward_with_meta_learner: true
+reward_with_meta_learner: false
 meta_learner_multiplier: 100
-use_meta_target_net: true
+use_meta_target_net: false
 
 behaviours:
   splitInGroups:
-    enabled: true
+    enabled: false
     reward: 0.5
     intermediate_rewards_enabled: true
   coordinatedPairMovement:
-    enabled: true
+    enabled: false
     reward: 0.2
   rewardClosestFruit:
     enabled: false
@@ -17,7 +17,12 @@ behaviours:
     reward: 1
     multiplier: 0.0005
     enabled: false
-
+  waitAtUnpickableFruit:
+    reward: 1
+    enabled: true
+  helpPickupFruit:
+    reward: 1
+    enabled: false
 #  balancedParticipation:
 #    enabled: true
 #    reward:

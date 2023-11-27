@@ -1,0 +1,431 @@
+{
+  "BalanceLevelRewardAdaption_count": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.869079"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "BalanceLevelRewardAdaption_reward": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.870079"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "CoordinatedPairMovement_count": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.869079"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "CoordinatedPairMovement_reward": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.870079"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "HelpPickupFruit_count": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.870079"
+    ],
+    "values": [
+      0.0002277227722772277
+    ]
+  },
+  "HelpPickupFruit_reward": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.871080"
+    ],
+    "values": [
+      0.00033663366336633666
+    ]
+  },
+  "RewardClosestFruit_count": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.869079"
+    ],
+    "values": [
+      0.0006366336633663366
+    ]
+  },
+  "RewardClosestFruit_reward": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.870079"
+    ],
+    "values": [
+      6.163366336633619e-07
+    ]
+  },
+  "SplitInGroups_count": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.869079"
+    ],
+    "values": [
+      6.930693069306931e-06
+    ]
+  },
+  "SplitInGroups_reward": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.870079"
+    ],
+    "values": [
+      3.4653465346534653e-06
+    ]
+  },
+  "WaitAtUnpickableFruit_count": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.869079"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "WaitAtUnpickableFruit_reward": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.871080"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "custom_coop_summed_mean": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.871080"
+    ],
+    "values": [
+      0.010100020627062707
+    ]
+  },
+  "epsilon": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:23:59.885870"
+    ],
+    "values": [
+      1.0
+    ]
+  },
+  "grad_norm": {
+    "steps": [
+      3200
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:23.794984"
+    ],
+    "values": [
+      6366.7138671875
+    ]
+  },
+  "loss": {
+    "steps": [
+      3200
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:23.794984"
+    ],
+    "values": [
+      562.2402954101562
+    ]
+  },
+  "meta_learner_loss_mean": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.867062"
+    ],
+    "values": [
+      0.0022101066592446353
+    ]
+  },
+  "meta_learner_prediction_mean": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.867062"
+    ],
+    "values": [
+      0.029557540735395828
+    ]
+  },
+  "metric_AgentsLevelDeviationMetric": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.867062"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "metric_AgentsSummedLevelMetric": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.867062"
+    ],
+    "values": [
+      4.0
+    ]
+  },
+  "metric_CoupledCollectedFood": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.869079"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "metric_FirstAgentCoupleRewardMetric": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.868080"
+    ],
+    "values": [
+      150.0
+    ]
+  },
+  "metric_FirstAgentRewardMetric": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.868080"
+    ],
+    "values": [
+      150.0
+    ]
+  },
+  "metric_HighestAgentLevelMetric": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.868080"
+    ],
+    "values": [
+      1.0
+    ]
+  },
+  "metric_HighestLevelFoodMetric": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.867062"
+    ],
+    "values": [
+      2.0
+    ]
+  },
+  "metric_LowestAgentLevelMetric": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.868080"
+    ],
+    "values": [
+      1.0
+    ]
+  },
+  "metric_StepsSpendWaitingAtFruit": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.868080"
+    ],
+    "values": [
+      0.09
+    ]
+  },
+  "metric_StepsTillAllAgentsCollect": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.868080"
+    ],
+    "values": [
+      150.0
+    ]
+  },
+  "q_taken_mean": {
+    "steps": [
+      3200
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:23.794984"
+    ],
+    "values": [
+      1.6009906005859376
+    ]
+  },
+  "target_max_qvals_mean": {
+    "steps": [
+      3200
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:23.795984"
+    ],
+    "values": [
+      6.730958251953125
+    ]
+  },
+  "target_mean": {
+    "steps": [
+      3200
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:23.795984"
+    ],
+    "values": [
+      6.598644409179688
+    ]
+  },
+  "td_error_abs": {
+    "steps": [
+      3200
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:23.794984"
+    ],
+    "values": [
+      20.14501220703125
+    ]
+  },
+  "test_ep_length_mean": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.863096"
+    ],
+    "values": [
+      100.0
+    ]
+  },
+  "test_only_built_in_return_mean": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.863096"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_only_built_in_return_std": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.863096"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_only_custom_return_mean": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.862096"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_only_custom_return_std": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.863096"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_summed_return_mean": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.862096"
+    ],
+    "values": [
+      0.0
+    ]
+  },
+  "test_summed_return_std": {
+    "steps": [
+      100
+    ],
+    "timestamps": [
+      "2023-11-25T11:27:04.862096"
+    ],
+    "values": [
+      0.0
+    ]
+  }
+}
